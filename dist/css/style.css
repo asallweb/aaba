@@ -274,7 +274,7 @@ h6 {
 }
 
 .header__contacts span {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(123, 123, 123);
   margin: 0 22px;
 }
 
@@ -352,7 +352,7 @@ h6 {
 }
 
 .header .menu__link_SR {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgb(123, 123, 123);
 }
 
 .header .menu__link_SR::before {
@@ -473,7 +473,7 @@ h6 {
     width: calc(100% - 75px);
     height: 50px;
     line-height: 15px;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgb(123, 123, 123);
     display: block;
   }
 
