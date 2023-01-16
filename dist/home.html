@@ -6,14 +6,14 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230116152902">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230116164825">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<div class="wrapper" style="background-color: green">
+	<div class="wrapper">
 		<header class="header">
 			<a href="/" class="header__logo">
 				<span class="header__logo-letters">
@@ -32,17 +32,33 @@
 						<li class="menu__item"><a href="" class="menu__link">Услуги</a></li>
 						<li class="menu__item"><a href="" class="menu__link">Бюро</a></li>
 						<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
-						<li class="menu__item"><a href="" class="menu__link menu__link_SR">Showreel</a></li>
+						<li class="menu__item"><button class="menu__link menu__link_SR">Showreel</button></li>
 					</ul>
 				</nav>
 			</div>
 			<div class="header__contacts">
-				<div class="header__contacts_inner">
+				<div class="header__contacts-inner">
 					Москва, Artplay <span>|</span> <a href="tel:+74952870040">+7 495 287 00 40</a>
 				</div>
 			</div>
 		</header>
-		<main class="page">home.html
+		<main class="page">
+			<div class="portfolio__slider swiper">
+				<div class="portfolio__wrapper swiper-wrapper">
+					<div class="portfolio__slide swiper-slide" data-fullscreen>
+						<picture><source srcset="img/content/portfolio_slider-1.webp" type="image/webp"><img src="img/content/portfolio_slider-1.jpg" alt="" class="portfolio__slide-img"></picture>
+					</div>
+					<div class="portfolio__slide swiper-slide" data-fullscreen>
+						<picture><source srcset="img/content/portfolio_slider-2.webp" type="image/webp"><img src="img/content/portfolio_slider-2.jpg" alt="" class="portfolio__slide-img"></picture>
+					</div>
+					<div class="portfolio__slide swiper-slide" data-fullscreen>
+						<picture><source srcset="img/content/portfolio_slider-3.webp" type="image/webp"><img src="img/content/portfolio_slider-3.jpg" alt="" class="portfolio__slide-img"></picture>
+					</div>
+				</div>
+				<button type="button" class="swiper-button-prev"></button>
+				<button type="button" class="swiper-button-next"></button>
+			</div>
+
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -59,7 +75,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230116152902"></script>
+	<script src="js/app.min.js?_v=20230116164825"></script>
 </body>
 
 </html>
