@@ -225,6 +225,18 @@ h6 {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: ease-out 2s;
+  -o-transition: ease-out 2s;
+  transition: ease-out 2s;
+}
+
+.swiper-slide-active .portfolio__slide-img {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .icon-menu {
