@@ -3535,6 +3535,7 @@
             spaceBetween: 0,
             autoHeight: true,
             speed: 800,
+            preloadImages: false,
             lazy: true,
             navigation: {
                 prevEl: ".swiper-button-prev",
