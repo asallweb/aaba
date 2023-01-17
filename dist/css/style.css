@@ -168,8 +168,12 @@ h6 {
      object-fit: contain;
 }
 
-.portfolio__slider .swiper-button-prev,
-.portfolio__slider .swiper-button-next {
+.portfolio {
+  position: relative;
+}
+
+.portfolio .swiper-button-prev,
+.portfolio .swiper-button-next {
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -186,8 +190,8 @@ h6 {
           justify-content: center;
 }
 
-.portfolio__slider .swiper-button-prev::before,
-.portfolio__slider .swiper-button-next::before {
+.portfolio .swiper-button-prev::before,
+.portfolio .swiper-button-next::before {
   content: "";
   display: block;
   width: 10px;
@@ -198,22 +202,28 @@ h6 {
   border-radius: 2px;
 }
 
-.portfolio__slider .swiper-button-prev {
+.portfolio .swiper-button-prev {
   left: 10px;
 }
 
-.portfolio__slider .swiper-button-prev::before {
+.portfolio .swiper-button-prev::before {
   border-bottom: 1.5px solid rgba(255, 255, 255, 0.7);
   border-left: 1.5px solid rgba(255, 255, 255, 0.7);
 }
 
-.portfolio__slider .swiper-button-next {
+.portfolio .swiper-button-next {
   right: 10px;
 }
 
-.portfolio__slider .swiper-button-next::before {
+.portfolio .swiper-button-next::before {
   border-top: 1.5px solid rgba(255, 255, 255, 0.7);
   border-right: 1.5px solid rgba(255, 255, 255, 0.7);
+}
+
+.portfolio .swiper-slide-active .portfolio__slide-img {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .portfolio__slide {
@@ -233,10 +243,127 @@ h6 {
   transition: ease-out 2s;
 }
 
-.swiper-slide-active .portfolio__slide-img {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
+.portfolio__slide-head {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: calc(100% - 100px);
+}
+
+.portfolio__slide-category {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 325%;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #FFEC55;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.portfolio__slide-title {
+  font-family: "CoFoPeshka";
+  font-weight: 500;
+  font-size: 150px;
+  line-height: 87%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+  font-stretch: 20;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+@supports (font-size: clamp( 3.75rem , 1.7045454545rem  +  10.2272727273vw , 9.375rem )) {
+  .portfolio__slide-title {
+    font-size: clamp( 3.75rem , 1.7045454545rem  +  10.2272727273vw , 9.375rem );
+  }
+}
+
+@supports not (font-size: clamp( 3.75rem , 1.7045454545rem  +  10.2272727273vw , 9.375rem )) {
+  .portfolio__slide-title {
+    font-size: calc(3.75rem + 5.625 * (100vw - 20rem) / 55);
+  }
+}
+
+.portfolio__slide-subtitle {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 154%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.portfolio__slide-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 17px 30px;
+  color: #FFFFFF;
+  font-size: 13px;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio__slide-footer-title {
+  font-weight: 700;
+  margin-right: 30px;
+}
+
+.portfolio__slide-footer-text {
+  font-weight: 400;
+}
+
+.portfolio__progress {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+}
+
+.portfolio__progress-fill {
+  position: absolute;
+  height: 4px;
+  background-color: #FFEC55;
+  -webkit-animation-name: progress;
+          animation-name: progress;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes progress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 .icon-menu {
@@ -544,6 +671,37 @@ h6 {
     -webkit-transition: height 0.2s;
     -o-transition: height 0.2s;
     transition: height 0.2s;
+  }
+
+  .portfolio .swiper-button-prev,
+  .portfolio .swiper-button-next {
+    top: 35%;
+  }
+
+  .portfolio__slide-img {
+    height: 70vh;
+  }
+
+  .portfolio__slide-head {
+    top: 35%;
+  }
+
+  .portfolio__slide-footer {
+    height: 30vh;
+    background: #5EBC64;
+    padding: 12px 25px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .portfolio__slide-footer-title {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
   .icon-menu {
