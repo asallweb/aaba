@@ -4038,14 +4038,12 @@
                     spaceBetween: 0,
                     autoHeight: true,
                     speed: 800,
-                    preloadImages: true,
+                    preloadImages: false,
                     navigation: {
                         prevEl: ".swiper-button-prev",
                         nextEl: ".swiper-button-next"
                     },
-                    lazy: {
-                        loadPrevNext: true
-                    },
+                    lazy: {},
                     effect: "fade",
                     loop: false
                 });
