@@ -4043,7 +4043,9 @@
                         prevEl: ".swiper-button-prev",
                         nextEl: ".swiper-button-next"
                     },
-                    lazy: {},
+                    lazy: {
+                        loadPrevNext: true
+                    },
                     effect: "fade",
                     loop: false
                 });
