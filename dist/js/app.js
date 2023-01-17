@@ -4068,7 +4068,7 @@
         }));
         var lazyload_min = __webpack_require__(732);
         new lazyload_min({
-            elements_selector: "[data-src],[data-srcset]",
+            elements_selector: ".lazy",
             class_loaded: "_lazy-loaded",
             use_native: true
         });
