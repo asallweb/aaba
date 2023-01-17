@@ -4047,7 +4047,7 @@
                         loadPrevNext: true
                     },
                     effect: "fade",
-                    loop: true
+                    loop: false
                 });
                 progressBar.addEventListener("animationend", myEndFunction);
                 function myEndFunction() {
