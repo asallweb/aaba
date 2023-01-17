@@ -266,7 +266,6 @@ h6 {
 
 .portfolio__slide-title {
   font-family: "CoFoPeshka";
-  font-weight: 500;
   font-size: 150px;
   line-height: 87%;
   text-align: center;
@@ -364,6 +363,19 @@ h6 {
   to {
     width: 100%;
   }
+}
+
+.swiper-container[class=swiper-container] {
+  padding-top: 41.66666667%;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper-container[class=swiper-container] .swiper-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .icon-menu {
