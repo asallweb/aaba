@@ -365,19 +365,6 @@ h6 {
   }
 }
 
-.swiper-container[class=swiper-container] {
-  padding-top: 41.66666667%;
-  height: 0;
-  overflow: hidden;
-  position: relative;
-}
-
-.swiper-container[class=swiper-container] .swiper-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .icon-menu {
   display: none;
   /* The element to apply the animation to */
