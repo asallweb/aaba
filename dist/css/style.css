@@ -844,17 +844,6 @@ body {
     height: 70vh;
   }
 
-  .portfolio .swiper-slide-active .portfolio__slide-img {
-    -webkit-animation-name: image-moving;
-            animation-name: image-moving;
-    -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-  }
-
   .portfolio__slide-head {
     top: 35%;
   }
