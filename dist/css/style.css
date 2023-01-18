@@ -231,6 +231,7 @@ h6 {
 }
 
 .portfolio__slide-img {
+  position: relative;
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
@@ -345,6 +346,21 @@ h6 {
           animation-iteration-count: 1;
 }
 
+.portfolio__mouse {
+  position: absolute;
+  left: 50%;
+  -webkit-transition: translate(-50%, 0);
+  -o-transition: translate(-50%, 0);
+  transition: translate(-50%, 0);
+  bottom: 100px;
+}
+
+.portfolio__mouse img {
+  position: relative;
+  -webkit-animation: mouse-moving 1s ease-in-out infinite;
+          animation: mouse-moving 1s ease-in-out infinite;
+}
+
 @-webkit-keyframes progress {
   from {
     width: 0%;
@@ -363,6 +379,119 @@ h6 {
   to {
     width: 100%;
   }
+}
+
+@-webkit-keyframes image-moving {
+  from {
+    right: 0%;
+  }
+
+  to {
+    right: 200%;
+  }
+}
+
+@keyframes image-moving {
+  from {
+    right: 0%;
+  }
+
+  to {
+    right: 200%;
+  }
+}
+
+@-webkit-keyframes mouse-moving {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 10px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes mouse-moving {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 10px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.showreel-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 170px;
+  right: 170px;
+}
+
+.showreel-btn__round {
+  margin-right: 22px;
+  width: 130px;
+  height: 130px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: ease-out 0.4s;
+  -o-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.showreel-btn__eye {
+  display: none;
+}
+
+.showreel-btn__title {
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 127%;
+  color: #FFFFFF;
+  text-align: left;
+  text-transform: uppercase;
+  -webkit-transition: ease-out 0.4s;
+  -o-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.showreel-btn:hover .showreel-btn__title {
+  color: #FFEC55;
+}
+
+.showreel-btn:hover .showreel-btn__round {
+  background: #FFEC55;
+  border-color: #FFEC55;
+}
+
+.showreel-btn:hover .showreel-btn__triangle {
+  display: none;
+}
+
+.showreel-btn:hover .showreel-btn__eye {
+  display: block;
 }
 
 .icon-menu {
@@ -678,7 +807,22 @@ h6 {
   }
 
   .portfolio__slide-img {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    width: auto;
     height: 70vh;
+  }
+
+  .portfolio .swiper-slide-active .portfolio__slide-img {
+    -webkit-animation-name: image-moving;
+            animation-name: image-moving;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
   }
 
   .portfolio__slide-head {
@@ -701,6 +845,14 @@ h6 {
   .portfolio__slide-footer-title {
     margin-right: 0;
     margin-bottom: 10px;
+  }
+
+  .portfolio__mouse {
+    display: none;
+  }
+
+  .showreel-btn {
+    display: none;
   }
 
   .icon-menu {
