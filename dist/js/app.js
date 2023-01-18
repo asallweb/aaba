@@ -3756,6 +3756,83 @@
                 loadInSlide
             });
         }
+        function Grid(_ref) {
+            let {swiper, extendParams} = _ref;
+            extendParams({
+                grid: {
+                    rows: 1,
+                    fill: "column"
+                }
+            });
+            let slidesNumberEvenToRows;
+            let slidesPerRow;
+            let numFullColumns;
+            const initSlides = slidesLength => {
+                const {slidesPerView} = swiper.params;
+                const {rows, fill} = swiper.params.grid;
+                slidesPerRow = slidesNumberEvenToRows / rows;
+                numFullColumns = Math.floor(slidesLength / rows);
+                if (Math.floor(slidesLength / rows) === slidesLength / rows) slidesNumberEvenToRows = slidesLength; else slidesNumberEvenToRows = Math.ceil(slidesLength / rows) * rows;
+                if ("auto" !== slidesPerView && "row" === fill) slidesNumberEvenToRows = Math.max(slidesNumberEvenToRows, slidesPerView * rows);
+            };
+            const updateSlide = (i, slide, slidesLength, getDirectionLabel) => {
+                const {slidesPerGroup, spaceBetween} = swiper.params;
+                const {rows, fill} = swiper.params.grid;
+                let newSlideOrderIndex;
+                let column;
+                let row;
+                if ("row" === fill && slidesPerGroup > 1) {
+                    const groupIndex = Math.floor(i / (slidesPerGroup * rows));
+                    const slideIndexInGroup = i - rows * slidesPerGroup * groupIndex;
+                    const columnsInGroup = 0 === groupIndex ? slidesPerGroup : Math.min(Math.ceil((slidesLength - groupIndex * rows * slidesPerGroup) / rows), slidesPerGroup);
+                    row = Math.floor(slideIndexInGroup / columnsInGroup);
+                    column = slideIndexInGroup - row * columnsInGroup + groupIndex * slidesPerGroup;
+                    newSlideOrderIndex = column + row * slidesNumberEvenToRows / rows;
+                    slide.css({
+                        "-webkit-order": newSlideOrderIndex,
+                        order: newSlideOrderIndex
+                    });
+                } else if ("column" === fill) {
+                    column = Math.floor(i / rows);
+                    row = i - column * rows;
+                    if (column > numFullColumns || column === numFullColumns && row === rows - 1) {
+                        row += 1;
+                        if (row >= rows) {
+                            row = 0;
+                            column += 1;
+                        }
+                    }
+                } else {
+                    row = Math.floor(i / slidesPerRow);
+                    column = i - row * slidesPerRow;
+                }
+                slide.css(getDirectionLabel("margin-top"), 0 !== row ? spaceBetween && `${spaceBetween}px` : "");
+            };
+            const updateWrapperSize = (slideSize, snapGrid, getDirectionLabel) => {
+                const {spaceBetween, centeredSlides, roundLengths} = swiper.params;
+                const {rows} = swiper.params.grid;
+                swiper.virtualSize = (slideSize + spaceBetween) * slidesNumberEvenToRows;
+                swiper.virtualSize = Math.ceil(swiper.virtualSize / rows) - spaceBetween;
+                swiper.$wrapperEl.css({
+                    [getDirectionLabel("width")]: `${swiper.virtualSize + spaceBetween}px`
+                });
+                if (centeredSlides) {
+                    snapGrid.splice(0, snapGrid.length);
+                    const newSlidesGrid = [];
+                    for (let i = 0; i < snapGrid.length; i += 1) {
+                        let slidesGridItem = snapGrid[i];
+                        if (roundLengths) slidesGridItem = Math.floor(slidesGridItem);
+                        if (snapGrid[i] < swiper.virtualSize + snapGrid[0]) newSlidesGrid.push(slidesGridItem);
+                    }
+                    snapGrid.push(...newSlidesGrid);
+                }
+            };
+            swiper.grid = {
+                initSlides,
+                updateSlide,
+                updateWrapperSize
+            };
+        }
         function effect_init_effectInit(params) {
             const {effect, swiper, on, setTranslate, setTransition, overwriteParams, perspective, recreateShadows, getEffectParams} = params;
             on("beforeInit", (() => {
@@ -3876,10 +3953,10 @@
             });
         }
         function initSliders() {
-            if (document.querySelector(".swiper")) {
+            if (document.querySelector(".portfolio__slider")) {
                 const progressBar = document.querySelector(".portfolio__progress-fill");
                 const slideImg = document.querySelector(".portfolio__slide-img");
-                const swiper = new core(".swiper", {
+                const swiper = new core(".portfolio__slider", {
                     modules: [ Navigation, Lazy, EffectFade ],
                     observer: true,
                     observeParents: true,
@@ -3889,8 +3966,8 @@
                     speed: 800,
                     preloadImages: false,
                     navigation: {
-                        prevEl: ".swiper-button-prev",
-                        nextEl: ".swiper-button-next"
+                        prevEl: ".portfolio__slider-prev",
+                        nextEl: ".portfolio__slider-next"
                     },
                     lazy: {
                         loadPrevNext: true,
@@ -3915,6 +3992,24 @@
                     slideImg.style.animation = "none";
                     slideImg.style.animation = null;
                 }));
+            }
+            if (document.querySelector(".partners__swiper")) {
+                new core(".partners__swiper", {
+                    modules: [ Grid, Navigation, Lazy ],
+                    slidesPerView: 4,
+                    grid: {
+                        rows: 2
+                    },
+                    navigation: {
+                        prevEl: ".partners__slider-prev",
+                        nextEl: ".partners__slider-next"
+                    },
+                    speed: 800,
+                    preloadImages: false,
+                    lazy: {
+                        loadPrevNext: true
+                    }
+                });
             }
         }
         window.addEventListener("load", (function(e) {
