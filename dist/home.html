@@ -1,18 +1,43 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="lock">
 
 <head>
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230118095722">
+	<style>
+		.pre-loader {
+			background-color: #fff;
+			position: fixed;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+			z-index: 999;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
+	<script>
+		window.addEventListener('load', function() {
+			document.querySelector('.pre-loader').style.display = 'none';
+			document.querySelector('html').classList.remove("lock");
+		});
+	</script>
+	<link rel="stylesheet" href="css/style.min.css?_v=20230118102218">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+	<div class="pre-loader">
+		<div class="loader">
+			<img src="img/icons/logo.svg" alt="">
+		</div>
+	</div>
 	<div class="wrapper">
 		<header class="header">
 			<a href="/" class="header__logo">
@@ -43,7 +68,7 @@
 			</div>
 		</header>
 		<main class="page">
-			<div class="portfolio portfolio__slider swiper" data-fullscreen>
+			<section class="portfolio portfolio__slider swiper" data-fullscreen>
 				<div class="portfolio__wrapper swiper-wrapper">
 					<div class="portfolio__slide swiper-slide" data-fullscreen>
 						<picture><source data-srcset="img/content/portfolio_slider-1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/content/portfolio_slider-1.jpg" alt="" class="portfolio__slide-img swiper-lazy"></picture>
@@ -100,7 +125,26 @@
 				<button class="portfolio__mouse">
 					<img src="img/icons/slider-mouse.svg" alt="Portfolio Mouse">
 				</button>
-			</div>
+			</section>
+			<section class="introduce">
+				<div class="introduce__col">
+					<picture><source srcset="img/content/introduce-1.webp" type="image/webp"><img src="img/content/introduce-1.png" alt=""></picture>
+				</div>
+				<div class="introduce__col">
+					<div class="introduce__head">
+						<div class="introduce__head-col">
+							<div class="introduce__head-title">Юрий Логинов</div>
+							<div class="introduce__head-subtitle">Архитектор, руководитель бюро</div>
+						</div>
+						<div class="introduce__head-col">
+							<div class="introduce__head-logo">
+								AABA <br>ARCHITECTS
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -117,7 +161,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230118095722"></script>
+	<script src="js/app.min.js?_v=20230118102218"></script>
 </body>
 
 </html>
