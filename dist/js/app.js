@@ -4008,6 +4008,20 @@
                     preloadImages: false,
                     lazy: {
                         loadPrevNext: true
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 2,
+                            grid: {
+                                rows: 4
+                            }
+                        },
+                        900: {
+                            slidesPerView: 3
+                        },
+                        1200: {
+                            slidesPerView: 4
+                        }
                     }
                 });
             }
