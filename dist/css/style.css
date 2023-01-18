@@ -99,6 +99,10 @@ h6 {
   font-size: inherit;
 }
 
+body {
+  background: #E5E5E5;
+}
+
 .lock body {
   overflow: hidden;
   -ms-touch-action: none;
@@ -228,6 +232,12 @@ h6 {
 
 .portfolio__slide {
   position: relative;
+}
+
+.portfolio__slide-wrapper-img {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .portfolio__slide-img {
@@ -492,6 +502,17 @@ h6 {
 
 .showreel-btn:hover .showreel-btn__eye {
   display: block;
+}
+
+.introduce__container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.introduce__image {
+  width: 100%;
+  height: auto;
 }
 
 .icon-menu {
@@ -804,6 +825,10 @@ h6 {
   .portfolio .swiper-button-prev,
   .portfolio .swiper-button-next {
     top: 35%;
+  }
+
+  .portfolio__slide-wrapper-img {
+    height: 70vh;
   }
 
   .portfolio__slide-img {
