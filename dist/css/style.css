@@ -232,6 +232,11 @@ body {
 
 .portfolio__slide {
   position: relative;
+  visibility: hidden;
+}
+
+.portfolio .swiper-slide-visible {
+  visibility: visible;
 }
 
 .portfolio__slide-wrapper-img {

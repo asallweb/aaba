@@ -3893,7 +3893,8 @@
                         nextEl: ".swiper-button-next"
                     },
                     lazy: {
-                        loadPrevNext: true
+                        loadPrevNext: true,
+                        loadPrevNextAmount: 1
                     },
                     effect: "fade",
                     loop: true
