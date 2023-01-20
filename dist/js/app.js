@@ -4025,6 +4025,23 @@
                     }
                 });
             }
+            if (document.querySelector(".clients__slider")) {
+                new core(".clients__slider", {
+                    modules: [ Navigation, Lazy, EffectFade ],
+                    slidesPerView: 1,
+                    navigation: {
+                        prevEl: ".clients__slider-prev",
+                        nextEl: ".clients__slider-next"
+                    },
+                    speed: 800,
+                    preloadImages: false,
+                    lazy: {
+                        loadPrevNext: true
+                    },
+                    effect: "fade",
+                    loop: true
+                });
+            }
         }
         window.addEventListener("load", (function(e) {
             initSliders();
