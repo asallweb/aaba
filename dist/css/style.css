@@ -1083,13 +1083,153 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 50px;
   display: -ms-grid;
   display: grid;
   grid-gap: 100px;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
   line-height: 20px;
+}
+
+@supports (padding: clamp( 1.5625rem , 0.9943181818rem  +  2.8409090909vw , 3.125rem )) {
+  .aaba-info__content {
+    padding: clamp( 1.5625rem , 0.9943181818rem  +  2.8409090909vw , 3.125rem );
+  }
+}
+
+@supports not (padding: clamp( 1.5625rem , 0.9943181818rem  +  2.8409090909vw , 3.125rem )) {
+  .aaba-info__content {
+    padding: calc(1.5625rem + 1.5625 * (100vw - 20rem) / 55);
+  }
+}
+
+.trust__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+}
+
+.trust__head {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@supports (padding: clamp( 1.5625rem , 0.9943181818rem  +  2.8409090909vw , 3.125rem )) {
+  .trust__head {
+    padding: clamp( 1.5625rem , 0.9943181818rem  +  2.8409090909vw , 3.125rem );
+  }
+}
+
+@supports not (padding: clamp( 1.5625rem , 0.9943181818rem  +  2.8409090909vw , 3.125rem )) {
+  .trust__head {
+    padding: calc(1.5625rem + 1.5625 * (100vw - 20rem) / 55);
+  }
+}
+
+.trust__title {
+  color: #000;
+}
+
+.trust__body {
+  height: 300px;
+  width: 900px;
+  position: relative;
+  background-color: #fff;
+}
+
+.trust__slider {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trust .swiper-wrapper {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.trust .swiper-slide {
+  background: #fff;
+  width: 300px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50% !important;
+}
+
+.trust__slider-prev,
+.trust__slider-next {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.trust__slider-prev::before,
+.trust__slider-next::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+.trust__slider-prev {
+  left: 10px;
+}
+
+.trust__slider-prev::before {
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.3);
+  border-left: 1.5px solid rgba(0, 0, 0, 0.3);
+}
+
+.trust__slider-next {
+  right: 10px;
+}
+
+.trust__slider-next::before {
+  border-top: 1.5px solid rgba(0, 0, 0, 0.3);
+  border-right: 1.5px solid rgba(0, 0, 0, 0.3);
 }
 
 .title-h1 {
@@ -1450,6 +1590,23 @@ body {
     left: 0;
     top: 300px;
   }
+
+  .trust {
+    height: 600px;
+  }
+
+  .trust__inner {
+    height: 600px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .trust__head {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1644,7 +1801,6 @@ body {
   }
 
   .aaba-info__content {
-    padding: 25px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1856,5 +2012,26 @@ body {
   .clients__slider-next {
     right: 0;
     left: auto;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 320px) {
+  .trust__head {
+    width: 100%;
+  }
+
+  .trust__body {
+    width: 100%;
+    height: 380px;
+  }
+
+  .trust .swiper-slide {
+    width: 50%;
+    height: 25% !important;
+  }
+
+  .trust .swiper-slide img {
+    max-width: 50%;
+    max-height: 50%;
   }
 }
