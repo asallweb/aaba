@@ -26,7 +26,7 @@
 			document.querySelector('html').classList.remove("lock");
 		});
 	</script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230124121339">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230124125019">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -123,16 +123,22 @@
 				</div>
 				<button class="showreel-btn">
 					<div class="showreel-btn__round">
-						<img src="img/icons/play-triangle.svg" alt="Play button icon" class="showreel-btn__triangle">
-						<img src="img/icons/play-eye.svg" alt="Play button icon" class="showreel-btn__eye">
+						<svg class="showreel-btn__triangle">
+							<use xlink:href="img/icons/icons.svg#svg-play-triangle"></use>
+						</svg>
+						<svg class="showreel-btn__eye">
+							<use xlink:href="img/icons/icons.svg#svg-play-eye"></use>
+						</svg>
 					</div>
 					<div class="showreel-btn__title">play <br> SHOWREEL</div>
 				</button>
 				<button class="portfolio__mouse">
-					<img src="img/icons/slider-mouse.svg" alt="Portfolio Mouse">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#svg-slider-mouse"></use>
+					</svg>
 				</button>
 			</section>
-			<section class="introduce">
+			<section class="inth1roduce">
 				<div class="introduce__container">
 					<div class="introduce__col">
 						<picture><source srcset="img/content/introduce-1.webp" type="image/webp"><img src="img/content/introduce-1.png" alt="introduce" class="introduce__image lazy"></picture>
@@ -166,7 +172,9 @@
 						<div class="introduce__footer">
 							<a href="#" class="more-btn introduce__more-btn">
 								Узнать больше
-								<img src="img/icons/arrow-right.svg" alt="arrow right">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#svg-arrow-right"></use>
+								</svg>
 							</a>
 						</div>
 					</div>
@@ -264,23 +272,27 @@
 								</div>
 								<div class="clients__photo">
 									<div class="clients__photo-img">
-										<picture><source srcset="img/content/clients-1.webp" type="image/webp"><img src="img/content/clients-1.png" alt="Client NAME" class="clients__photo-src"></picture>
+										<picture><source srcset="img/content/clients-1.webp" type="image/webp"><img src="img/content/clients-1.png" alt="Client NAME" class="clients__photo-src swiper-lazy"></picture>
 									</div>
 								</div>
 								<div class="clients__project">
 									<div class="clients__project-img">
-										<picture><source srcset="img/content/clients-2.webp" type="image/webp"><img src="img/content/clients-2.png" alt="PROJECT NAME"></picture>
+										<picture><source srcset="img/content/clients-2.webp" type="image/webp"><img src="img/content/clients-2.png" alt="PROJECT NAME" class="swiper-lazy"></picture>
 									</div>
 									<a href="#" class="clients__project-uptitle">Генплан</a>
 									<a href="#" class="clients__project-title title-h2">Многофункциональный комплекс на Волге</a>
 									<a href="#" class="clients__project-more more-btn">
 										смотреть проект
-										<img src="img/icons/arrow-right.svg" alt="">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#svg-arrow-right"></use>
+										</svg>
 									</a>
 								</div>
 								<div class="clients__comment">
 									<div class="clients__quotes">
-										<img src="img/icons/quotes.svg" alt="">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#svg-quotes"></use>
+										</svg>
 									</div>
 									<div class="clients__comment-content">
 										<div class="clients__comment-text">
@@ -288,7 +300,9 @@
 										</div>
 										<a href="#" class="clients__more-btn more-btn">
 											Смотреть проект
-											<img src="img/icons/arrow-right.svg" alt="">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#svg-arrow-right"></use>
+											</svg>
 										</a>
 									</div>
 								</div>
@@ -301,23 +315,27 @@
 								</div>
 								<div class="clients__photo">
 									<div class="clients__photo-img">
-										<picture><source srcset="img/content/clients-4.webp" type="image/webp"><img src="img/content/clients-4.jpg" alt="Client NAME" class="clients__photo-src"></picture>
+										<picture><source srcset="img/content/clients-4.webp" type="image/webp"><img src="img/content/clients-4.jpg" alt="Client NAME" class="clients__photo-src swiper-lazy"></picture>
 									</div>
 								</div>
 								<div class="clients__project">
 									<div class="clients__project-img">
-										<picture><source srcset="img/content/clients-3.webp" type="image/webp"><img src="img/content/clients-3.jpg" alt="PROJECT NAME"></picture>
+										<picture><source srcset="img/content/clients-3.webp" type="image/webp"><img src="img/content/clients-3.jpg" alt="PROJECT NAME" class="swiper-lazy"></picture>
 									</div>
 									<a href="#" class="clients__project-uptitle">Интерьер</a>
 									<a href="#" class="clients__project-title title-h2">Интерьер компании «Деловой Мир Онлайн»</a>
 									<a href="#" class="clients__project-more more-btn">
 										смотреть проект
-										<img src="img/icons/arrow-right.svg" alt="">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#svg-arrow-right"></use>
+										</svg>
 									</a>
 								</div>
 								<div class="clients__comment">
 									<div class="clients__quotes">
-										<img src="img/icons/quotes.svg" alt="">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#svg-quotes"></use>
+										</svg>
 									</div>
 									<div class="clients__comment-content">
 										<div class="clients__comment-text">
@@ -325,7 +343,9 @@
 										</div>
 										<a href="#" class="clients__more-btn more-btn">
 											Смотреть проект
-											<img src="img/icons/arrow-right.svg" alt="">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#svg-arrow-right"></use>
+											</svg>
 										</a>
 									</div>
 								</div>
@@ -356,40 +376,40 @@
 							<div class="trust__slider swiper">
 								<div class="trust__wrapper swiper-wrapper">
 									<div class="trust__slide swiper-slide">
-										<picture><source srcset="img/content/trust-1.webp" type="image/webp"><img src="img/content/trust-1.png" alt="trust image"></picture>
+										<picture><source srcset="img/content/trust-1.webp" type="image/webp"><img src="img/content/trust-1.png" alt="trust image" class="swiper-lazy"></picture>
 									</div>
 									<div class="trust__slide swiper-slide">
-										<picture><source srcset="img/content/trust-2.webp" type="image/webp"><img src="img/content/trust-2.png" alt="trust image"></picture>
+										<picture><source srcset="img/content/trust-2.webp" type="image/webp"><img src="img/content/trust-2.png" alt="trust image" class="swiper-lazy"></picture>
 									</div>
 									<div class="trust__slide swiper-slide">
-										<picture><source srcset="img/content/trust-3.webp" type="image/webp"><img src="img/content/trust-3.png" alt="trust image"></picture>
+										<picture><source srcset="img/content/trust-3.webp" type="image/webp"><img src="img/content/trust-3.png" alt="trust image" class="swiper-lazy"></picture>
 									</div>
 									<div class="trust__slide swiper-slide">
-										<picture><source srcset="img/content/trust-4.webp" type="image/webp"><img src="img/content/trust-4.png" alt="trust image"></picture>
+										<picture><source srcset="img/content/trust-4.webp" type="image/webp"><img src="img/content/trust-4.png" alt="trust image" class="swiper-lazy"></picture>
 									</div>
 									<div class="trust__slide swiper-slide">
-										<picture><source srcset="img/content/trust-5.webp" type="image/webp"><img src="img/content/trust-5.png" alt="trust image"></picture>
+										<picture><source srcset="img/content/trust-5.webp" type="image/webp"><img src="img/content/trust-5.png" alt="trust image" class="swiper-lazy"></picture>
 									</div>
 									<div class="trust__slide swiper-slide">
-										<picture><source srcset="img/content/trust-6.webp" type="image/webp"><img src="img/content/trust-6.png" alt="trust image"></picture>
+										<picture><source srcset="img/content/trust-6.webp" type="image/webp"><img src="img/content/trust-6.png" alt="trust image" class="swiper-lazy"></picture>
 									</div>
 									<div class="trust__slide swiper-slide">
-										<picture><source srcset="img/content/trust-1.webp" type="image/webp"><img src="img/content/trust-1.png" alt="trust image"></picture>
+										<picture><source srcset="img/content/trust-1.webp" type="image/webp"><img src="img/content/trust-1.png" alt="trust image" class="swiper-lazy"></picture>
 									</div>
 									<div class="trust__slide swiper-slide">
-										<picture><source srcset="img/content/trust-2.webp" type="image/webp"><img src="img/content/trust-2.png" alt="trust image"></picture>
+										<picture><source srcset="img/content/trust-2.webp" type="image/webp"><img src="img/content/trust-2.png" alt="trust image" class="swiper-lazy"></picture>
 									</div>
 									<div class="trust__slide swiper-slide">
-										<picture><source srcset="img/content/trust-3.webp" type="image/webp"><img src="img/content/trust-3.png" alt="trust image"></picture>
+										<picture><source srcset="img/content/trust-3.webp" type="image/webp"><img src="img/content/trust-3.png" alt="trust image" class="swiper-lazy"></picture>
 									</div>
 									<div class="trust__slide swiper-slide">
-										<picture><source srcset="img/content/trust-4.webp" type="image/webp"><img src="img/content/trust-4.png" alt="trust image"></picture>
+										<picture><source srcset="img/content/trust-4.webp" type="image/webp"><img src="img/content/trust-4.png" alt="trust image" class="swiper-lazy"></picture>
 									</div>
 									<div class="trust__slide swiper-slide">
-										<picture><source srcset="img/content/trust-5.webp" type="image/webp"><img src="img/content/trust-5.png" alt="trust image"></picture>
+										<picture><source srcset="img/content/trust-5.webp" type="image/webp"><img src="img/content/trust-5.png" alt="trust image" class="swiper-lazy"></picture>
 									</div>
 									<div class="trust__slide swiper-slide">
-										<picture><source srcset="img/content/trust-6.webp" type="image/webp"><img src="img/content/trust-6.png" alt="trust image"></picture>
+										<picture><source srcset="img/content/trust-6.webp" type="image/webp"><img src="img/content/trust-6.png" alt="trust image" class="swiper-lazy"></picture>
 									</div>
 								</div>
 							</div>
@@ -413,7 +433,9 @@
 							</div>
 							<a href="#" class="more-btn services-info__more-btn">
 								РАССЧИТАТЬ
-								<img src="img/icons/arrow-right.svg" alt="arrow right">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#svg-arrow-right"></use>
+								</svg>
 							</a>
 						</div>
 					</div>
@@ -592,7 +614,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230124121339"></script>
+	<script src="js/app.min.js?_v=20230124125019"></script>
 </body>
 
 </html>
