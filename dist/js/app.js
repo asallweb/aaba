@@ -4135,6 +4135,22 @@
                     }
                 });
             }
+            if (document.querySelector(".portfolio-4x4__slider")) {
+                new core(".portfolio-4x4__slider", {
+                    modules: [ Navigation, Lazy ],
+                    slidesPerView: 1,
+                    navigation: {
+                        prevEl: ".portfolio-4x4__slider-prev",
+                        nextEl: ".portfolio-4x4__slider-next"
+                    },
+                    speed: 800,
+                    preloadImages: false,
+                    lazy: {
+                        loadPrevNext: true
+                    },
+                    loop: true
+                });
+            }
         }
         window.addEventListener("load", (function(e) {
             initSliders();
