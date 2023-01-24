@@ -1305,7 +1305,7 @@ body {
 .services-design__inner {
   position: relative;
   width: 600px;
-  height: 937.5px;
+  height: 1200px;
   left: 0;
   top: 0;
 }
@@ -1529,7 +1529,7 @@ body {
 
 .header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
