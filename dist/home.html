@@ -26,7 +26,7 @@
 			document.querySelector('html').classList.remove("lock");
 		});
 	</script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230128115514">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230130141912">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,8 +116,8 @@
 						<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
 					</div>
 				</div>
-				<button type="button" class="portfolio__slider-prev"></button>
-				<button type="button" class="portfolio__slider-next"></button>
+				<button type="button" class="portfolio__slider-prev slider-prev"></button>
+				<button type="button" class="portfolio__slider-next slider-next"></button>
 				<div class="portfolio__progress">
 					<div class="portfolio__progress-fill"></div>
 				</div>
@@ -255,8 +255,8 @@
 								</div>
 							</div>
 						</div>
-						<button type="button" class="partners__slider-next"></button>
-						<button type="button" class="partners__slider-prev"></button>
+						<button type="button" class="partners__slider-next slider-next"></button>
+						<button type="button" class="partners__slider-prev slider-prev"></button>
 					</div>
 				</div>
 			</section>
@@ -351,8 +351,8 @@
 								</div>
 							</div>
 						</div>
-						<button type="button" class="clients__slider-prev"></button>
-						<button type="button" class="clients__slider-next"></button>
+						<button type="button" class="clients__slider-prev slider-prev"></button>
+						<button type="button" class="clients__slider-next slider-next"></button>
 					</div>
 				</div>
 			</section>
@@ -413,8 +413,8 @@
 									</div>
 								</div>
 							</div>
-							<button type="button" class="trust__slider-next"></button>
-							<button type="button" class="trust__slider-prev"></button>
+							<button type="button" class="trust__slider-next slider-next"></button>
+							<button type="button" class="trust__slider-prev slider-prev"></button>
 						</div>
 					</div>
 				</div>
@@ -617,8 +617,8 @@
 								</div>
 							</div>
 						</div>
-						<button type="button" class="portfolio-4x4__slider-next"></button>
-						<button type="button" class="portfolio-4x4__slider-prev"></button>
+						<button type="button" class="portfolio-4x4__slider-next slider-next"></button>
+						<button type="button" class="portfolio-4x4__slider-prev slider-prev"></button>
 					</div>
 				</div>
 			</section>
@@ -630,7 +630,7 @@
 							<div class="feedback-2x1__title title-h1">Оставить заявку</div>
 							<div class="feedback-2x1__content-inner">
 								<div class="feedback-2x1__text">Ответьте на несколько коротких вопросов. Наше архитектурное дизайн-бюро структурирует всю имеющуюся информацию и в самое ближайшее время детально оценим объем работ по Вашему проекту</div>
-								<a href="" class="feedback-2x1__link">
+								<a href="" class="feedback-2x1__link ">
 									<svg class="feedback-2x1__link-ico">
 										<use xlink:href="img/icons/icons.svg#svg-arrow-right-long"></use>
 									</svg>
@@ -766,8 +766,8 @@
 								</div>
 							</div>
 						</div>
-						<button type="button" class="portfolio-4x4__slider-next"></button>
-						<button type="button" class="portfolio-4x4__slider-prev"></button>
+						<button type="button" class="portfolio-4x4__slider-next slider-next"></button>
+						<button type="button" class="portfolio-4x4__slider-prev slider-prev"></button>
 					</div>
 
 					<div class="work-steps__item">
@@ -867,8 +867,8 @@
 									</div>
 								</div>
 							</div>
-							<button type="button" class="portfolio-4x4__slider-next"></button>
-							<button type="button" class="portfolio-4x4__slider-prev"></button>
+							<button type="button" class="portfolio-4x4__slider-next slider-next"></button>
+							<button type="button" class="portfolio-4x4__slider-prev slider-prev"></button>
 						</div>
 					</div>
 					<div class="guests__item guests__item_2x1">
@@ -887,6 +887,46 @@
 				</div>
 			</section>
 
+			<section class="contact">
+				<div class="contact__container">
+					<div class="contact__item contact__item_2x2">
+						<div class="title-h1">Мы любим <br> проектировать</div>
+						<a href="#">Смотрите другие наши <br> проекты.</a>
+					</div>
+					<div class="contact__item contact__item_map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.329207791192!2d37.66818361605992!3d55.75278319946073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a9380cf0f37%3A0x4d8acf2e25223b5e!2z0J3QuNC20L3Rj9GPINCh0YvRgNC-0LzRj9GC0L3QuNGH0LXRgdC60LDRjyDRg9C7LiwgMTAsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMDUxMjA!5e0!3m2!1sru!2spl!4v1675074782298!5m2!1sru!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+					<div class="contact__item contact__item_contact">
+						<div>
+							<b>Центр дизайна <br> ARTPLAY </b> <br><br>
+							Москва, ул. Нижняя <br> Сыромятническая, 10
+						</div>
+						<a href="" class="contact__openMap-btn">Открыть карту</a>
+					</div>
+					<div class="contact__item contact__item_slider">
+						<div class="contact__slider swiper">
+							<div class="contact__wrapper swiper-wrapper">
+								<div class="contact__slide swiper-slide">
+									<picture><source srcset="img/content/contact-1.webp" type="image/webp"><img src="img/content/contact-1.png" alt="contact-1"></picture>
+								</div>
+								<div class="contact__slide swiper-slide">
+									<picture><source srcset="img/content/contact-2.webp" type="image/webp"><img src="img/content/contact-2.png" alt="contact-2"></picture>
+								</div>
+							</div>
+							<button type="button" class="contact__slider-next slider-next"></button>
+							<button type="button" class="contact__slider-prev slider-prev"></button>
+						</div>
+					</div>
+					<div class="contact__item contact__item_calc">
+						<div class="title-h2">Рассчитать стоимость проекта</div>
+						<a href="" class="guests__link">
+							<svg class="guests__link-ico">
+								<use xlink:href="img/icons/icons.svg#svg-arrow-right-long"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -903,7 +943,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230128115514"></script>
+	<script src="js/app.min.js?_v=20230130141912"></script>
 </body>
 
 </html>

@@ -4151,6 +4151,30 @@
                     loop: true
                 });
             }
+            if (document.querySelector(".contact__slider")) {
+                new core(".contact__slider", {
+                    modules: [ Navigation, Lazy ],
+                    slidesPerView: 2,
+                    navigation: {
+                        prevEl: ".contact__slider-prev",
+                        nextEl: ".contact__slider-next"
+                    },
+                    speed: 800,
+                    preloadImages: false,
+                    lazy: {
+                        loadPrevNext: true
+                    },
+                    loop: true,
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1
+                        },
+                        600: {
+                            slidesPerView: 2
+                        }
+                    }
+                });
+            }
         }
         window.addEventListener("load", (function(e) {
             initSliders();
