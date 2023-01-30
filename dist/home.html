@@ -26,7 +26,7 @@
 			document.querySelector('html').classList.remove("lock");
 		});
 	</script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230130141912">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230130163644">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -121,7 +121,7 @@
 				<div class="portfolio__progress">
 					<div class="portfolio__progress-fill"></div>
 				</div>
-				<button class="showreel-btn">
+				<button class="portfolio__showreel showreel-btn">
 					<div class="showreel-btn__round">
 						<svg class="showreel-btn__triangle">
 							<use xlink:href="img/icons/icons.svg#svg-play-triangle"></use>
@@ -907,10 +907,10 @@
 						<div class="contact__slider swiper">
 							<div class="contact__wrapper swiper-wrapper">
 								<div class="contact__slide swiper-slide">
-									<picture><source srcset="img/content/contact-1.webp" type="image/webp"><img src="img/content/contact-1.png" alt="contact-1"></picture>
+									<picture><source srcset="img/content/contact-1.webp" type="image/webp"><img src="img/content/contact-1.png" alt="contact-1" class=" swiper-lazy"></picture>
 								</div>
 								<div class="contact__slide swiper-slide">
-									<picture><source srcset="img/content/contact-2.webp" type="image/webp"><img src="img/content/contact-2.png" alt="contact-2"></picture>
+									<picture><source srcset="img/content/contact-2.webp" type="image/webp"><img src="img/content/contact-2.png" alt="contact-2" class=" swiper-lazy"></picture>
 								</div>
 							</div>
 							<button type="button" class="contact__slider-next slider-next"></button>
@@ -919,8 +919,8 @@
 					</div>
 					<div class="contact__item contact__item_calc">
 						<div class="title-h2">Рассчитать стоимость проекта</div>
-						<a href="" class="guests__link">
-							<svg class="guests__link-ico">
+						<a href="" class="contact__link">
+							<svg class="contact__link-ico">
 								<use xlink:href="img/icons/icons.svg#svg-arrow-right-long"></use>
 							</svg>
 						</a>
@@ -930,6 +930,103 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
+				<div class="footer__item footer__item_1x2 hideInMobile">
+					<a href="" class="footer__main-link">Услуги по архитектурному проектированию</a>
+					<a href="" class="footer__link">Проекты и дизайн загородных вилл</a>
+					<a href="" class="footer__link">Энергосберегающие дома</a>
+					<a href="" class="footer__link">Ландшафтный дизайн</a>
+					<a href="" class="footer__link">Генплан котеджных поселков и районов</a>
+					<a href="" class="footer__link">Общественные и офисные здания</a>
+					<a href="" class="footer__link">Проектирование конноспортивных комплексов</a>
+					<div class="footer__delimeter"></div>
+					<a href="" class="footer__main-link">Услуги по жилому интерьеру</a>
+					<a href="" class="footer__link">Заказать дизайн проект квартиры</a>
+					<a href="" class="footer__link">Проектирование интерьера и дизайна дома / коттеджа</a>
+				</div>
+				<div class="footer__item footer__item_1x2 hideInMobile">
+					<a href="" class="footer__main-link">Услуги по дизайну общественного интерьера</a>
+					<a href="" class="footer__link">Дизайн салона красоты</a>
+					<a href="" class="footer__link">Салон красоты под ключ</a>
+					<a href="" class="footer__link">Дизайн стоматологических клиник</a>
+					<a href="" class="footer__link">Проектирование интерьера гостиниц и отелей</a>
+					<a href="" class="footer__link">Дизайн кафе и ресторанов</a>
+					<a href="" class="footer__link">Торговые комплексы и магазины</a>
+					<a href="" class="footer__link">Проектирование интерьера офиса</a>
+					<a href="" class="footer__link">Проектирование интерьера спортивных залов</a>
+					<a href="" class="footer__link">Дизайн танцевальных залов</a>
+					<a href="" class="footer__link">Фирменный стиль интерьера: брендбук сети</a>
+				</div>
+				<div class="footer__item showInMobile">
+					<a href="" class="footer__main-link">Услуги</a>
+					<a href="" class="footer__link">Услуги по архитектурному проектированию</a>
+					<a href="" class="footer__link">Услуги по жилому интерьеру</a>
+					<a href="" class="footer__link">Консалтинг</a>
+				</div>
+				<div class="footer__item footer__item_1x2">
+					<a href="" class="footer__main-link">Бюро</a>
+					<a href="" class="footer__link">Миссия</a>
+					<a href="" class="footer__link">Юрий Логинов - резюме</a>
+					<a href="" class="footer__link">Публикации</a>
+					<a href="" class="footer__link">Рекомендации</a>
+					<a href="" class="footer__link">Партнеры</a>
+					<div class="footer__delimeter"></div>
+					<a href="" class="footer__main-link">Контакты</a>
+					<a href="" class="footer__link">Заказчикам</a>
+					<a href="" class="footer__link">Поставщикам продукции и услуг</a>
+					<a href="" class="footer__link">Вакансии</a>
+					<a href="" class="footer__link">Практика и стажировка</a>
+					<a href="" class="footer__map-link">Карта сайта</a>
+				</div>
+				<div class="footer__item footer__item_showreel">
+					<div class="footer__showreel-inner">
+						<picture><source srcset="img/content/footer__showreel.webp" type="image/webp"><img src="img/content/footer__showreel.png" class="footer__showreel-image"></picture>
+						<button class="footer__showreel showreel-btn">
+							<div class="showreel-btn__round">
+								<svg class="showreel-btn__triangle">
+									<use xlink:href="img/icons/icons.svg#svg-play-triangle"></use>
+								</svg>
+								<svg class="showreel-btn__eye">
+									<use xlink:href="img/icons/icons.svg#svg-play-eye"></use>
+								</svg>
+							</div>
+							<div class="showreel-btn__title">play <br> SHOWREEL</div>
+						</button>
+					</div>
+				</div>
+				<div class="footer__item footer__item_empty"></div>
+				<div class="footer__item">
+					<a href="" class="footer__main-link">Портфолио</a>
+					<a href="" class="footer__link">Избранное</a>
+					<a href="" class="footer__link">Архитектурное проектирование</a>
+					<a href="" class="footer__link">Дизайн интерьера</a>
+					<a href="" class="footer__link">Генплан</a>
+				</div>
+				<div class="footer__item footer__item_empty-black"></div>
+				<div class="footer__item footer__item_zakaz showInMobile">
+					<b>Телефон <a href="">для <span style="text-decoration: underline;">заказа проекта</span></a> </b><br>
+					<a href="tel:+74955078690">+7 495 507 86 90</a>
+				</div>
+				<div class="footer__item footer__item_white">
+					<div class="hideInMobile">
+						<b>Телефон <a href="">для заказа проекта</a> </b><br>
+						<span>
+							<a href="tel:+74955078690">+7 495 507 86 90</a> <br>
+							будни с 9.00 до 22.00 <br>
+							выходные с 11.00 до 17.00
+						</span>
+					</div>
+					<div>
+						<b>Мастерская и офис</b><br>
+						<a href="tel:+74952870040">+7 495 287 00 40</a>
+					</div>
+				</div>
+				<div class="footer__item footer__item_white  footer__item_white-last">
+					<div>
+						<b> Поставщиков продукции и услуг, соискателей настоятельно просим не звонить. Пишите: </b>
+						<a href="mailto:info@aaba.ru">info@aaba.ru</a>
+					</div>
+					<div>ООО «ААБА» © 2003-2022</div>
+				</div>
 			</div>
 		</footer>
 	</div>
@@ -943,7 +1040,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230130141912"></script>
+	<script src="js/app.min.js?_v=20230130163644"></script>
 </body>
 
 </html>
