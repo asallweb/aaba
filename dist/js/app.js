@@ -4185,6 +4185,17 @@
             class_loaded: "_lazy-loaded",
             use_native: true
         });
+        const showMobileMenu = function(e) {
+            const attribute = this.getAttribute("data-id");
+            const element = document.getElementById(attribute);
+            if ("none" === element.style.display) {
+                e.preventDefault();
+                element.style.display = "block";
+                this.classList.toggle("active");
+            }
+        };
+        let menuItem = document.querySelectorAll("[data-id]");
+        for (var i = 0; i < menuItem.length; i++) menuItem[i].addEventListener("click", showMobileMenu, false);
         window["FLS"] = true;
         isWebp();
         menuInit();

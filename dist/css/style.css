@@ -2250,24 +2250,9 @@ body {
   border-right: 1.5px solid rgba(0, 0, 0, 0.3);
 }
 
-.icon-menu {
-  display: none;
-  /* The element to apply the animation to */
-}
-
-.icon-menu div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  -webkit-animation-name: example;
-          animation-name: example;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-}
-
 .header {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2463,6 +2448,174 @@ body {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI5IiB2aWV3Qm94PSIwIDAgNiA5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNS41Mzc2IDQuODE1MzFMMC41Mzc1OTcgOC44MTUzMUwwLjUzNzU5OCAwLjgxNTMwN0w1LjUzNzYgNC44MTUzMVoiIGZpbGw9ImJsYWNrIiBmaWxsLW9wYWNpdHk9IjAuNSIvPgo8L3N2Zz4K);
 }
 
+.icon-menu {
+  display: none;
+}
+
+.mMenu {
+  display: none;
+  background: #2E2E2E;
+  position: fixed;
+  top: 25px;
+  overflow-y: scroll;
+  height: calc(100vh - 25px);
+  width: 100vw;
+  z-index: 2;
+  padding: 75px 0 100px;
+}
+
+.menu-open .mMenu {
+  display: block;
+}
+
+.mMenu__body {
+  height: 90%;
+  overflow-y: scroll;
+  padding: 0 25px;
+}
+
+.mMenu__item {
+  margin-bottom: 15px;
+}
+
+.mMenu__count {
+  font-family: "ProximaNova";
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1;
+  color: #FFFFFF;
+  background-color: #000;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 35px;
+  height: 22px;
+  border-radius: 60px;
+  top: -5px;
+  position: relative;
+}
+
+.mMenu__count_red {
+  background-color: #E8684B;
+}
+
+.mMenu__2lvl {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 40px 20px 0;
+}
+
+.mMenu__2lvl_3lvl {
+  padding: 10px 0 15px 40px;
+  border-bottom: none;
+}
+
+.mMenu__link {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: none;
+  margin-bottom: 20px;
+}
+
+.mMenu__link_main {
+  font-family: "CoFoPeshka";
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 0.9;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.mMenu__link_showreel {
+  color: rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mMenu__link_showreel::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 22px;
+  margin-right: 8px;
+  margin-top: 10px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAxNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0IDEyLjEzMjRMLTkuOTA3OTJlLTA3IDIzLjQ2NThMMCAwLjc5OTA4N0wxNCAxMi4xMzI0WiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC41Ii8+Cjwvc3ZnPgo=) 0 0 no-repeat;
+}
+
+.mMenu__link_white {
+  color: #fff;
+}
+
+.mMenu__link_small {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.mMenu__footer {
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+  height: 94px;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 25px;
+}
+
+.mMenu__btn {
+  background: #E8684B;
+  width: 187.5px;
+  height: 187.5px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+  padding: 25px;
+  font-family: "CoFoPeshka";
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 0.86;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.mMenu__btn-ico {
+  width: 50px;
+  height: 9px;
+  stroke: #fff;
+}
+
 .footer__container {
   display: -ms-grid;
   display: grid;
@@ -2477,7 +2630,7 @@ body {
   position: relative;
   overflow: hidden;
   line-height: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 @supports (padding: clamp( 1.5625rem , 0.9943181818rem  +  2.8409090909vw , 3.125rem )) {
@@ -2549,7 +2702,7 @@ body {
 .footer__link {
   display: block;
   line-height: 1.5;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 5px;
 }
 
@@ -3741,66 +3894,6 @@ body {
     display: none;
   }
 
-  .icon-menu {
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 9px;
-    cursor: pointer;
-    z-index: 5;
-    right: 24px;
-    top: 20px;
-  }
-
-  .icon-menu::before,
-  .icon-menu::after {
-    content: "";
-    -webkit-transition: top 0.3s 0.3s, background-color 0.3s, -webkit-transform 0.3s;
-    transition: top 0.3s 0.3s, background-color 0.3s, -webkit-transform 0.3s;
-    -o-transition: top 0.3s 0.3s, background-color 0.3s, transform 0.3s;
-    transition: top 0.3s 0.3s, background-color 0.3s, transform 0.3s;
-    transition: top 0.3s 0.3s, background-color 0.3s, transform 0.3s, -webkit-transform 0.3s;
-    right: 0;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-  }
-
-  .icon-menu::before {
-    top: 0;
-  }
-
-  .icon-menu::after {
-    bottom: 0;
-  }
-
-  .menu-open .icon-menu span {
-    width: 0;
-  }
-
-  .menu-open .icon-menu::before,
-  .menu-open .icon-menu::after {
-    top: 50%;
-    -webkit-transition: top 0.3s, background-color 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
-    transition: top 0.3s, background-color 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
-    -o-transition: top 0.3s, transform 0.3s 0.3s, background-color 0.3s 0.3s;
-    transition: top 0.3s, transform 0.3s 0.3s, background-color 0.3s 0.3s;
-    transition: top 0.3s, transform 0.3s 0.3s, background-color 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
-  }
-
-  .menu-open .icon-menu::before {
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-
-  .menu-open .icon-menu::after {
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-
   .header__logo {
     height: 50px;
     width: 75px;
@@ -3871,6 +3964,66 @@ body {
 
   .header .menu__body {
     display: none;
+  }
+
+  .icon-menu {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 9px;
+    cursor: pointer;
+    z-index: 5;
+    right: 24px;
+    top: 20px;
+  }
+
+  .icon-menu::before,
+  .icon-menu::after {
+    content: "";
+    -webkit-transition: top 0.3s 0.3s, background-color 0.3s, -webkit-transform 0.3s;
+    transition: top 0.3s 0.3s, background-color 0.3s, -webkit-transform 0.3s;
+    -o-transition: top 0.3s 0.3s, background-color 0.3s, transform 0.3s;
+    transition: top 0.3s 0.3s, background-color 0.3s, transform 0.3s;
+    transition: top 0.3s 0.3s, background-color 0.3s, transform 0.3s, -webkit-transform 0.3s;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+
+  .icon-menu::before {
+    top: 0;
+  }
+
+  .icon-menu::after {
+    bottom: 0;
+  }
+
+  .menu-open .icon-menu span {
+    width: 0;
+  }
+
+  .menu-open .icon-menu::before,
+  .menu-open .icon-menu::after {
+    top: 50%;
+    -webkit-transition: top 0.3s, background-color 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+    transition: top 0.3s, background-color 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+    -o-transition: top 0.3s, transform 0.3s 0.3s, background-color 0.3s 0.3s;
+    transition: top 0.3s, transform 0.3s 0.3s, background-color 0.3s 0.3s;
+    transition: top 0.3s, transform 0.3s 0.3s, background-color 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+  }
+
+  .menu-open .icon-menu::before {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+
+  .menu-open .icon-menu::after {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
   }
 }
 
