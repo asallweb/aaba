@@ -4191,7 +4191,7 @@
             if ("none" === element.style.display) {
                 e.preventDefault();
                 element.style.display = "block";
-                this.classList.toggle("active");
+                this.classList.toggle("mMenu__link_active");
             }
         };
         let menuItem = document.querySelectorAll("[data-id]");
