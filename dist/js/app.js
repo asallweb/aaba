@@ -4196,6 +4196,13 @@
         };
         let menuItem = document.querySelectorAll("[data-id]");
         for (var i = 0; i < menuItem.length; i++) menuItem[i].addEventListener("click", showMobileMenu, false);
+        window.addEventListener("scroll", (function() {
+            const scrollTop = window.scrollY;
+            const element = this.document.getElementById("portfolio");
+            console.log(element);
+            if (scrollTop >= 130) element.classList.add("portfolio_scrolled"); else element.classList.remove("portfolio_scrolled");
+            if (scrollTop >= 1200) element.style.display = "none"; else element.style.display = "block";
+        }), false);
         window["FLS"] = true;
         isWebp();
         menuInit();
