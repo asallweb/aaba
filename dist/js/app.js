@@ -4127,10 +4127,13 @@
                             }
                         },
                         900: {
-                            slidesPerView: 3,
+                            slidesPerView: 2,
                             grid: {
                                 rows: 2
                             }
+                        },
+                        1200: {
+                            slidesPerView: 3
                         }
                     }
                 });
@@ -4199,9 +4202,7 @@
         window.addEventListener("scroll", (function() {
             const scrollTop = window.scrollY;
             const element = this.document.getElementById("portfolio");
-            console.log(element);
             if (scrollTop >= 130) element.classList.add("portfolio_scrolled"); else element.classList.remove("portfolio_scrolled");
-            if (scrollTop >= 1200) element.style.display = "none"; else element.style.display = "block";
         }), false);
         window["FLS"] = true;
         isWebp();
