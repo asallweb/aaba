@@ -548,6 +548,7 @@ body {
 .introduce__head-title {
   color: #FFFFFF;
   margin-bottom: 22px;
+  font-size: 70px !important;
 }
 
 .introduce__head-subtitle {
@@ -561,6 +562,7 @@ body {
 .introduce__head-logo {
   text-align: right;
   color: rgba(255, 255, 255, 0.15);
+  font-size: 70px !important;
 }
 
 .introduce__body {
@@ -3355,8 +3357,8 @@ body {
   }
 
   .trust .swiper-slide img {
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .services-info__container {
@@ -3725,6 +3727,24 @@ body {
     max-width: 375px;
   }
 
+  .introduce__head-col {
+    width: 156px;
+  }
+
+  .introduce__head-title {
+    position: absolute;
+    font-size: 55px !important;
+  }
+
+  .introduce__head-subtitle {
+    position: absolute;
+    top: 60px;
+  }
+
+  .introduce__head-logo {
+    font-size: 55px !important;
+  }
+
   .partners__container {
     max-width: 375px;
   }
@@ -3895,7 +3915,7 @@ body {
 
   .advantages-list__num {
     font-weight: 650;
-    font-size: 205px;
+    font-size: 200px;
     line-height: 135px;
   }
 
@@ -4296,7 +4316,7 @@ body {
 
   .introduce__head-subtitle {
     position: absolute;
-    top: 90px;
+    top: 86px;
   }
 
   .clients__slider-prev {
