@@ -26,7 +26,7 @@
 			document.querySelector('html').classList.remove("lock");
 		});
 	</script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230203150814">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230206122322">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -202,7 +202,7 @@
 			</button>
 		</section>
 		<main class="page">
-			<section class="inth1roduce">
+			<section class="introduce">
 				<div class="introduce__container">
 					<div class="introduce__col">
 						<picture><source srcset="img/content/introduce-1.webp" type="image/webp"><img src="img/content/introduce-1.png" alt="introduce" class="introduce__image lazy"></picture>
@@ -319,8 +319,8 @@
 								</div>
 							</div>
 						</div>
-						<button type="button" class="partners__slider-next slider-next"></button>
-						<button type="button" class="partners__slider-prev slider-prev"></button>
+						<button type="button" class="partners__slider-next slider-next slider-next_nobg"></button>
+						<button type="button" class="partners__slider-prev slider-prev slider-prev_nobg"></button>
 					</div>
 				</div>
 			</section>
@@ -345,7 +345,7 @@
 									</div>
 									<a href="#" class="clients__project-uptitle">Генплан</a>
 									<a href="#" class="clients__project-title title-h2">Многофункциональный комплекс на Волге</a>
-									<a href="#" class="clients__project-more more-btn">
+									<a href="#" class="more-btn clients__project-more">
 										смотреть проект
 										<svg>
 											<use xlink:href="img/icons/icons.svg#svg-arrow-right"></use>
@@ -362,7 +362,7 @@
 										<div class="clients__comment-text">
 											Мы искренне благодарим архитектурно-проектное бюро и лично Юрия Логинова за консультирование и разработку обновленного плана-стратегии развития туризма города Кашин Тверской области - как части ЗОЛОТОГО КОЛЬЦА. Проект «Арт-Волга» - это широкие перспективы развития для региона при плодотворном взаимодействии частного малоэтажного строительства и масштабных художественных инициатив.
 										</div>
-										<a href="#" class="clients__more-btn more-btn">
+										<a href="#" class="more-btn clients__more-btn">
 											Смотреть проект
 											<svg>
 												<use xlink:href="img/icons/icons.svg#svg-arrow-right"></use>
@@ -388,7 +388,7 @@
 									</div>
 									<a href="#" class="clients__project-uptitle">Интерьер</a>
 									<a href="#" class="clients__project-title title-h2">Интерьер компании «Деловой Мир Онлайн»</a>
-									<a href="#" class="clients__project-more more-btn">
+									<a href="#" class="more-btn clients__project-more">
 										смотреть проект
 										<svg>
 											<use xlink:href="img/icons/icons.svg#svg-arrow-right"></use>
@@ -405,7 +405,7 @@
 										<div class="clients__comment-text">
 											Благодарен и рекомендую эффектную и эффективную смелость и положительный потенциал команды <a href="">Юрия Логинова</a> в работе над незаурядным образом нашего корпоративного интерьера.
 										</div>
-										<a href="#" class="clients__more-btn more-btn">
+										<a href="#" class="more-btn clients__more-btn">
 											Смотреть проект
 											<svg>
 												<use xlink:href="img/icons/icons.svg#svg-arrow-right"></use>
@@ -479,8 +479,8 @@
 									</div>
 								</div>
 							</div>
-							<button type="button" class="trust__slider-next slider-next"></button>
-							<button type="button" class="trust__slider-prev slider-prev"></button>
+							<button type="button" class="trust__slider-next slider-next slider-next_nobg"></button>
+							<button type="button" class="trust__slider-prev slider-prev slider-prev_nobg"></button>
 						</div>
 					</div>
 				</div>
@@ -698,7 +698,7 @@
 							<div class="feedback-2x1__title title-h1">Оставить заявку</div>
 							<div class="feedback-2x1__content-inner">
 								<div class="feedback-2x1__text">Ответьте на несколько коротких вопросов. Наше архитектурное дизайн-бюро структурирует всю имеющуюся информацию и в самое ближайшее время детально оценим объем работ по Вашему проекту</div>
-								<a href="" class="feedback-2x1__link ">
+								<a href="" class="feedback-2x1__link btn-arrow btn-arrow_right-long">
 									<svg class="feedback-2x1__link-ico">
 										<use xlink:href="img/icons/icons.svg#svg-arrow-right-long"></use>
 									</svg>
@@ -904,7 +904,7 @@
 						<div class="guests__text">
 							Ответьте всего на 8 коротких вопросов
 						</div>
-						<a href="" class="guests__link">
+						<a href="" class="guests__link btn-arrow btn-arrow_right-long">
 							<svg class="guests__link-ico">
 								<use xlink:href="img/icons/icons.svg#svg-arrow-right-long"></use>
 							</svg>
@@ -986,7 +986,7 @@
 					</div>
 					<div class="contact__item contact__item_calc">
 						<div class="title-h2">Рассчитать стоимость проекта</div>
-						<a href="" class="contact__link">
+						<a href="" class="contact__link btn-arrow btn-arrow_right-long">
 							<svg class="contact__link-ico">
 								<use xlink:href="img/icons/icons.svg#svg-arrow-right-long"></use>
 							</svg>
@@ -1070,27 +1070,28 @@
 				</div>
 				<div class="footer__item footer__item_empty-black"></div>
 				<div class="footer__item footer__item_zakaz showInMobile">
-					<b>Телефон <a href="">для <span style="text-decoration: underline;">заказа проекта</span></a> </b><br>
-					<a href="tel:+74955078690">+7 495 507 86 90</a>
+					<b>Телефон для <a href="" class="footer__info-link" style="text-decoration: underline;">заказа проекта</a> </b><br>
+					<a href="tel:+74955078690" class="footer__info-link">+7 495 507 86 90</a>
 				</div>
 				<div class="footer__item footer__item_white">
 					<div class="hideInMobile">
-						<b>Телефон <a href="">для заказа проекта</a> </b><br>
+						<b>Телефон для <a href="" class="footer__info-link" style="text-decoration: underline;">заказа проекта</a></b><br>
 						<span>
-							<a href="tel:+74955078690">+7 495 507 86 90</a> <br>
+							<a href="tel:+74955078690" class="footer__info-link">+7 495 507 86 90</a> <br>
 							будни с 9.00 до 22.00 <br>
 							выходные с 11.00 до 17.00
 						</span>
 					</div>
 					<div>
 						<b>Мастерская и офис</b><br>
-						<a href="tel:+74952870040">+7 495 287 00 40</a>
+						<a href="tel:+74952870040" class="footer__info-link">+7 495 287 00 40</a>
 					</div>
 				</div>
 				<div class="footer__item footer__item_white  footer__item_white-last">
 					<div>
 						<b> Поставщиков продукции и услуг, соискателей настоятельно просим не звонить. Пишите: </b>
-						<a href="mailto:info@aaba.ru">info@aaba.ru</a>
+						<br>
+						<a href="mailto:info@aaba.ru" class="footer__info-link">info@aaba.ru</a>
 					</div>
 					<div>ООО «ААБА» © 2003-2022</div>
 				</div>
@@ -1107,7 +1108,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230203150814"></script>
+	<script src="js/app.min.js?_v=20230206122322"></script>
 </body>
 
 </html>
