@@ -26,7 +26,7 @@
 			document.querySelector('html').classList.remove("lock");
 		});
 	</script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230206122322">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230206160728">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,15 +51,116 @@
 			</a>
 			<div class="header__menu menu">
 				<button type="button" class="menu__icon icon-menu" name="menu"></button>
-				<nav class="menu__body">
+				<menu class="menu__body">
 					<ul class="menu__list">
 						<li class="menu__item"><a href="" class="menu__link">Портфолио</a></li>
-						<li class="menu__item"><a href="" class="menu__link">Услуги</a></li>
-						<li class="menu__item"><a href="" class="menu__link">Бюро</a></li>
+						<li class="menu__item menu__item_hasChild">
+							<a href="" class="menu__link">Услуги</a>
+							<ul class="menu__submenu">
+								<li class="menu__submenu-block">
+									<ul class="menu__submenu-list">
+										<li class="menu__submenu-title">Услуги по архитектурному проектированию</li>
+										<li class="menu__submenu-item"><a href="/services/landscape_design/" class="menu__submenu-link">Ландшафтный
+												дизайн</a></li>
+										<li class="menu__submenu-item"><a href="/services/architectural_design/" class="menu__submenu-link">Общественные и
+												офисные здания </a></li>
+										<li class="menu__submenu-item"><a href="/services/energy_saving_house/" class="menu__submenu-link">Энергосберегающие
+												дома</a></li>
+										<li class="menu__submenu-item"><a href="/services/country_house/" class="menu__submenu-link">Проекты и дизайн
+												загородных вилл</a></li>
+										<li class="menu__submenu-item"><a href="/services/Genplan/" class="menu__submenu-link">Генплан котеджных поселков и
+												районов</a></li>
+										<li class="menu__submenu-item"><a href="/services/reconstruction/" class="menu__submenu-link">Реконструкция и
+												перепланировка</a></li>
+										<li class="menu__submenu-item"><a href="/services/proektirovanie-konnosportivnykh-kompleksov/" class="menu__submenu-link">Проектирование конноспортивных комплексов</a></li>
+									</ul>
+									<ul class="menu__submenu-list">
+										<li class="menu__submenu-title">Услуги по консалтингу</li>
+										<li class="menu__submenu-item"><a href="/services/consulting_1/" class="menu__submenu-link">Экспресс
+												консультации</a></li>
+										<li class="menu__submenu-item"><a href="/services/consulting_2/" class="menu__submenu-link">Полный предпроектный
+												анализ</a></li>
+										<li class="menu__submenu-item"><a href="/services/consulting_3/" class="menu__submenu-link">Альтернативная
+												энергетика и системы энергосбережения</a></li>
+										<li class="menu__submenu-item"><a href="/services/consulting/" class="menu__submenu-link">Стратегии
+												многофункциональных объектов</a></li>
+									</ul>
+								</li>
+								<li class="menu__submenu-block">
+									<ul class="menu__submenu-list">
+										<li class="menu__submenu-title">Услуги по дизайну интерьера</li>
+										<li class="menu__submenu-item"><a href="/services/beauty_shop/" class="menu__submenu-link">Дизайн салона красоты</a>
+										</li>
+										<li class="menu__submenu-item"><a href="/services/proektirovanie-interera-sportivnyh-zalov/" class="menu__submenu-link">Проектирование интерьера спортивных залов</a></li>
+										<li class="menu__submenu-item"><a href="/services/interior_design/" class="menu__submenu-link">Проектирование
+												интерьера офиса</a></li>
+										<li class="menu__submenu-item"><a href="/services/residential_interiors/" class="menu__submenu-link">Заказать дизайн
+												интерьера дома</a></li>
+										<li class="menu__submenu-item"><a href="/services/furniture_and_light/" class="menu__submenu-link">Дизайн и
+												производство мебели</a></li>
+										<li class="menu__submenu-item"><a href="/services/kafe/" class="menu__submenu-link">Дизайн кафе и ресторанов</a>
+										</li>
+										<li class="menu__submenu-item"><a href="/services/interior_shoping_mall/" class="menu__submenu-link">Торговые
+												комплексы и магазины</a></li>
+										<li class="menu__submenu-item"><a href="/services/dizayn-stomatologicheskich-klinik/" class="menu__submenu-link">Дизайн стоматологических клиник</a></li>
+										<li class="menu__submenu-item"><a href="/services/scenography/" class="menu__submenu-link">Фирменный стиль
+												интерьера: брендбук сети</a></li>
+										<li class="menu__submenu-item"><a href="/services/salon-krasoty-pod-kljuch/" class="menu__submenu-link">Салон
+												красоты под ключ</a></li>
+										<li class="menu__submenu-item"><a href="/services/zakaz-dizayn-kvartiry/" class="menu__submenu-link">Заказать дизайн
+												проект квартиры</a></li>
+										<li class="menu__submenu-item"><a href="/services/proektirovanie-dizajna-gostinic/" class="menu__submenu-link">Проектирование интерьера гостиниц и отелей</a></li>
+										<li class="menu__submenu-item"><a href="/services/ball-room_design/" class="menu__submenu-link">Дизайн танцевальных
+												залов</a></li>
+									</ul>
+								</li>
+								<li class="menu__submenu-block menu__submenu-block_calc">
+									<a href="#" class="menu__submenu-link">
+										<svg class="showreel-btn__triangle">
+											<use xlink:href="img/icons/icons.svg#svg-menu-calculator"></use>
+										</svg>
+										Рассчитать стоимость<br>Вашего проекта
+									</a>
+								</li>
+								<li class="menu__submenu-block menu__submenu-block_all-services">
+									<a href="javascript:void()" class="menu__submenu-link">
+										<svg class="showreel-btn__triangle">
+											<use xlink:href="img/icons/icons.svg#svg-menu-services"></use>
+										</svg>
+										Вывести все услуги
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="menu__item menu__item_hasChild">
+							<a href="" class="menu__link">Бюро</a>
+							<ul class="menu__submenu menu__submenu_small">
+								<li class="menu__submenu-block">
+									<ul class="menu__submenu-list">
+										<li class="menu__submenu-title">Архитектурное бюро Юрия Логинова</li>
+										<li class="menu__submenu-item">
+											<a class="menu__submenu-link" href="#">Мастерская: ARTPLAY</a>
+										</li>
+										<li class="menu__submenu-item">
+											<a class="menu__submenu-link" href="#">Юрий Логинов - резюме</a>
+										</li>
+										<li class="menu__submenu-item">
+											<a class="menu__submenu-link" href="#">Публикации</a>
+										</li>
+										<li class="menu__submenu-item">
+											<a class="menu__submenu-link" href="#">Рекомендации</a>
+										</li>
+										<li class="menu__submenu-item">
+											<a class="menu__submenu-link" href="#">Партнеры</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
 						<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
 						<li class="menu__item"><button class="menu__link menu__link_SR">Showreel</button></li>
 					</ul>
-				</nav>
+				</menu>
 			</div>
 			<div class="header__contacts">
 				<div class="header__contacts-inner">
@@ -184,7 +285,7 @@
 			<div class="portfolio__progress">
 				<div class="portfolio__progress-fill"></div>
 			</div>
-			<button class="portfolio__showreel showreel-btn">
+			<button class="portfolio__showreel showreel-btn" data-popup="#showreel-popup">
 				<div class="showreel-btn__round">
 					<svg class="showreel-btn__triangle">
 						<use xlink:href="img/icons/icons.svg#svg-play-triangle"></use>
@@ -1098,17 +1199,17 @@
 			</div>
 		</footer>
 	</div>
-	<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
+	<div id="showreel-popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">X</button>
+				<div class="popup__text">
+
+				</div>
 			</div>
 		</div>
 	</div>
-</div> -->
-	<script src="js/app.min.js?_v=20230206122322"></script>
+	<script src="js/app.min.js?_v=20230206160728"></script>
 </body>
 
 </html>
