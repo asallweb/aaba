@@ -2473,6 +2473,19 @@ body::after {
   }
 }
 
+.smooth-showing-animation {
+  transition: transform 0.9s ease-in-out, opacity 0.9s, -webkit-transform 0.9s ease-in-out;
+  -webkit-transform: translate3d(0, 35%, 0);
+          transform: translate3d(0, 35%, 0);
+  opacity: 0;
+}
+
+._watcher-view {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
 .header {
   position: fixed;
   z-index: 3;
