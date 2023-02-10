@@ -26,7 +26,7 @@
 			document.querySelector('html').classList.remove("lock");
 		});
 	</script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230210103356">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230210104408">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -171,7 +171,7 @@
 								</li>
 							</ul>
 						</li>
-						<li class="menu__item"><button class="menu__link menu__link_SR" data-popup="#showreel-popup">Showreel</button></li>
+						<li class="menu__item"><button class="menu__link menu__link_SR" data-popup="#showreel-popup" data-popup-youtube="XwJJlTXbvfE">Showreel</button></li>
 					</ul>
 				</menu>
 			</div>
@@ -185,7 +185,7 @@
 			<div class="mMenu__body">
 				<div class="mMenu__body-inner">
 					<div class="mMenu__item">
-						<a href="" class="mMenu__link mMenu__link_main mMenu__link_showreel" data-popup="#showreel-popup">Play showreel</a>
+						<a href="" class="mMenu__link mMenu__link_main mMenu__link_showreel" data-popup="#showreel-popup" data-popup-youtube="XwJJlTXbvfE">Play showreel</a>
 					</div>
 					<div class="mMenu__item">
 						<a href="" class="mMenu__link mMenu__link_main">Портфолио <sup class="mMenu__count mMenu__count_red">115</sup></a>
@@ -1161,7 +1161,7 @@
 				<div class="footer__item footer__item_showreel">
 					<div class="footer__showreel-inner">
 						<picture><source srcset="img/content/footer__showreel.webp" type="image/webp"><img src="img/content/footer__showreel.png" class="footer__showreel-image"></picture>
-						<button class="footer__showreel showreel-btn" data-popup="#showreel-popup">
+						<button class="footer__showreel showreel-btn" data-popup="#showreel-popup" data-popup-youtube="XwJJlTXbvfE">
 							<div class="showreel-btn__round">
 								<svg class="showreel-btn__triangle">
 									<use xlink:href="img/icons/icons.svg#svg-play-triangle"></use>
@@ -1217,12 +1217,11 @@
 			<button data-close type="button" class="popup__close">X</button>
 			<div class="popup__content popup__content_no-padding">
 				<div class="popup__text responsiveVideo">
-					<iframe width="100%" height="auto" src="https://www.youtube.com/embed/XwJJlTXbvfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20230210103356"></script>
+	<script src="js/app.min.js?_v=20230210104408"></script>
 </body>
 
 </html>
