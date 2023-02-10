@@ -523,7 +523,7 @@
                 this.options.init ? this.initPopups() : null;
             }
             initPopups() {
-                this.popupLogging(`Проснулся`);
+                this.popupLogging(`Прокинувся`);
                 this.eventsPopup();
             }
             eventsPopup() {
@@ -539,7 +539,7 @@
                             this._selectorOpen = true;
                             this.open();
                             return;
-                        } else this.popupLogging(`Ой ой, не заполнен атрибут у ${buttonOpen.classList}`);
+                        } else this.popupLogging(`Йой, не заповнено атрибут у ${buttonOpen.classList}`);
                         return;
                     }
                     const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
@@ -588,7 +588,7 @@
                             const codeVideo = this.youTubeCode;
                             const urlVideo = `https://www.youtube.com/embed/${codeVideo}?rel=0&showinfo=0&autoplay=1`;
                             const iframe = document.createElement("iframe");
-                            iframe.setAttribute("allowfullscreen", "");
+                            iframe.setAttribute("allowfullscreen", "true");
                             const autoplay = this.options.setAutoplayYoutube ? "autoplay;" : "";
                             iframe.setAttribute("allow", `${autoplay}; encrypted-media`);
                             iframe.setAttribute("src", urlVideo);
@@ -624,8 +624,8 @@
                                 popup: this
                             }
                         }));
-                        this.popupLogging(`Открыл попап`);
-                    } else this.popupLogging(`Ой ой, такого попапа нет.Проверьте корректность ввода. `);
+                        this.popupLogging(`Відкрив попап`);
+                    } else this.popupLogging(`Йой, такого попапу немає. Перевірте коректність введення. `);
                 }
             }
             close(selectorValue) {
@@ -659,7 +659,7 @@
                 setTimeout((() => {
                     this._focusTrap();
                 }), 50);
-                this.popupLogging(`Закрыл попап`);
+                this.popupLogging(`Закрив попап`);
             }
             _getHash() {
                 if (this.options.hashSettings.location) this.hash = this.targetOpen.selector.includes("#") ? this.targetOpen.selector : this.targetOpen.selector.replace(".", "#");
@@ -667,6 +667,7 @@
             _openToHash() {
                 let classInHash = document.querySelector(`.${window.location.hash.replace("#", "")}`) ? `.${window.location.hash.replace("#", "")}` : document.querySelector(`${window.location.hash}`) ? `${window.location.hash}` : null;
                 const buttons = document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash}"]`) ? document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash}"]`) : document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash.replace(".", "#")}"]`);
+                this.youTubeCode = buttons.getAttribute(this.options.youtubeAttribute) ? buttons.getAttribute(this.options.youtubeAttribute) : null;
                 if (buttons && classInHash) this.open(classInHash);
             }
             _setHash() {
