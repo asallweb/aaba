@@ -4405,6 +4405,22 @@
                     loop: true
                 });
             }
+            if (document.querySelector(".guests__slider")) {
+                new core(".guests__slider", {
+                    modules: [ Navigation, EffectFade ],
+                    slidesPerView: 1,
+                    navigation: {
+                        prevEl: ".portfolio-4x4__slider-prev",
+                        nextEl: ".portfolio-4x4__slider-next"
+                    },
+                    speed: 800,
+                    loop: true,
+                    effect: "fade",
+                    fadeEffect: {
+                        crossFade: true
+                    }
+                });
+            }
             if (document.querySelector(".contact__slider")) {
                 new core(".contact__slider", {
                     modules: [ Navigation, Lazy ],
