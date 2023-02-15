@@ -471,9 +471,6 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .portfolio__slide-footer-title {
@@ -519,7 +516,7 @@ body::after {
   -webkit-transition: translate(-50%, 0);
   -o-transition: translate(-50%, 0);
   transition: translate(-50%, 0);
-  bottom: 100px;
+  bottom: 130px;
   width: 14px;
   height: 21px;
 }
@@ -1292,6 +1289,7 @@ body::after {
 .services-info__head-text {
   margin-bottom: 30px;
   max-width: 400px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .services-info__more-btn {
@@ -3513,6 +3511,21 @@ body::after {
 }
 
 @media (max-width: 1200px) {
+  .portfolio .showreel-btn__round {
+    width: 100px;
+    height: 100px;
+  }
+
+  .portfolio .showreel-btn__eye {
+    width: 15px;
+    height: 11px;
+  }
+
+  .portfolio .showreel-btn__triangle {
+    width: 8px;
+    height: 14px;
+  }
+
   .introduce__container {
     max-width: 900px;
   }
@@ -4781,8 +4794,8 @@ body::after {
   }
 
   .clients__photo {
-    left: 300px;
-    top: 0;
+    left: 0;
+    top: 300px;
   }
 
   .clients__project {
@@ -4795,6 +4808,11 @@ body::after {
     left: 0;
     right: auto;
     top: 600px;
+  }
+
+  .clients__quotes {
+    min-width: 56px;
+    min-height: 42px;
   }
 
   .services-outer__container {
