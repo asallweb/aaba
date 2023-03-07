@@ -26,7 +26,7 @@
 			document.querySelector('html').classList.remove("lock");
 		});
 	</script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230307103456">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230307164105">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -318,10 +318,10 @@
 		<main class="page">
 			<section class="introduce">
 				<div class="introduce__container">
-					<div class="introduce__col">
+					<div class="introduce__image-wrapper">
 						<picture><source srcset="img/content/introduce-1.webp" type="image/webp"><img src="img/content/introduce-1.png" alt="introduce" class="introduce__image lazy"></picture>
 					</div>
-					<div class="introduce__col introduce__col_content">
+					<div class="introduce__content">
 						<div class="introduce__head">
 							<div class="introduce__head-col">
 								<div class="introduce__head-title title-h1">Юрий Логинов</div>
@@ -816,6 +816,10 @@
 						<div class="advantages-list__num">12</div>
 						<div class="advantages-list__name">Преимуществ</div>
 					</div>
+					<div class="advantages-list__item _desktopLargeEmpty"></div>
+					<div class="advantages-list__item _desktopLargeEmpty"></div>
+					<div class="advantages-list__item _desktopLargeEmpty"></div>
+					<div class="advantages-list__item _desktopLargeEmpty"></div>
 					<div class="advantages-list__item">
 						<div class="advantages-list__icon"><svg>
 								<use xlink:href="img/icons/icons.svg#svg-advantages-list-1"></use>
@@ -830,8 +834,8 @@
 						<div class="advantages-list__title">Ясный запоминающийся дизайн</div>
 						<div class="advantages-list__text">Мощный WOW-фактор. <br> Арсенал инноваций для <br> успешного бизнеса и личного <br> пространства.</div>
 					</div>
-					<div class="advantages-list__item advantages-list__item_desktopVisible"></div>
-					<div class="advantages-list__item advantages-list__item_desktopVisible"></div>
+					<div class="advantages-list__item _desktopVisible"></div>
+					<div class="advantages-list__item _desktopVisible"></div>
 					<div class="advantages-list__item">
 						<div class="advantages-list__icon"><svg>
 								<use xlink:href="img/icons/icons.svg#svg-advantages-list-3"></use>
@@ -846,7 +850,8 @@
 						<div class="advantages-list__title">Слаженная <br> команда</div>
 						<div class="advantages-list__text">Наши партнеры проверены <br> временем. Инженеры, <br> строители, мебельное <br> производство. Согласования. <br> Работы под ключ.</div>
 					</div>
-					<div class="advantages-list__item advantages-list__item_1200-900-Visible"></div>
+					<div class="advantages-list__item _desktopLargeEmpty"></div>
+					<div class="advantages-list__item _1200-900-Visible"></div>
 					<div class="advantages-list__item">
 						<div class="advantages-list__icon"><svg>
 								<use xlink:href="img/icons/icons.svg#svg-advantages-list-5"></use>
@@ -889,7 +894,7 @@
 						<div class="advantages-list__title">Уникальные <br> материалы</div>
 						<div class="advantages-list__text">Огромный выбор уникальных <br> материалов - Вы можете <br> подержать все в руках в нашем <br> офисе и на прилегающей <br> территории ARTPLAY.</div>
 					</div>
-					<div class="advantages-list__item advantages-list__item_1200-900-Visible"></div>
+					<div class="advantages-list__item _1200-900-Visible"></div>
 					<div class="advantages-list__item">
 						<div class="advantages-list__icon"><svg>
 								<use xlink:href="img/icons/icons.svg#svg-advantages-list-11"></use>
@@ -897,7 +902,8 @@
 						<div class="advantages-list__title">Международный <br> опыт</div>
 						<div class="advantages-list__text">Адаптация лучших западных <br> технологий в проектировании <br> и строительстве под <br> особенности российского <br> производства.</div>
 					</div>
-					<div class="advantages-list__item advantages-list__item_desktopVisible"></div>
+					<div class="advantages-list__item _desktopVisible"></div>
+					<div class="advantages-list__item _desktopLargeEmpty"></div>
 					<div class="advantages-list__item">
 						<div class="advantages-list__icon"><svg>
 								<use xlink:href="img/icons/icons.svg#svg-advantages-list-12"></use>
@@ -909,19 +915,18 @@
 			</section>
 			<section class="work-steps">
 				<div class="work-steps__container smooth-showing-animation" data-watch>
-					<div class="work-steps__item work-steps__item_main">
+					<div class="work-steps__item work-steps__item_main _item-1">
 						<div class="work-steps__name title-h1">Начало работы над <br> проектом</div>
 					</div>
-					<div class="work-steps__item work-steps__item_1200-900-Visible"></div>
-					<div class="work-steps__item">
+					<div class="work-steps__item _1200-900-Visible"></div>
+					<div class="work-steps__item _item-2">
 						<div class="work-steps__head">
 							<div class="work-steps__num">01</div>
 							<div class="work-steps__title">Бесплатная <br> консультация</div>
 						</div>
 						<div class="work-steps__text">По телефону или электронной <br> почте даем Первую Бесплатную <br> консультацию по Вашей задаче</div>
 					</div>
-					<div class="work-steps__item work-steps__item_desktopVisible"></div>
-
+					<div class="work-steps__item _desktopVisible _item-3"></div>
 					<div class="work-steps__item work-steps__item_slider portfolio-4x4__slider swiper">
 						<div class="portfolio-4x4__wrapper swiper-wrapper">
 							<div class="portfolio-4x4__slide swiper-slide">
@@ -942,29 +947,28 @@
 						<button type="button" class="portfolio-4x4__slider-next slider-next"></button>
 						<button type="button" class="portfolio-4x4__slider-prev slider-prev"></button>
 					</div>
-
-					<div class="work-steps__item">
+					<div class="work-steps__item _item-4">
 						<div class="work-steps__head">
 							<div class="work-steps__num">02</div>
 							<div class="work-steps__title">Оставляете <br> заявку</div>
 						</div>
 						<div class="work-steps__text">Высылаете все имеющиеся <br> материалы: планировки, <br> полюбившиеся аналоги (как <br> выглядит лучший дизайн <br> интерьера или архитектурное <br> решение на ваш взгляд) или <br> краткое описание задачи <br> (через сайт или по телефону) </div>
 					</div>
-					<div class="work-steps__item">
+					<div class="work-steps__item _item-5">
 						<div class="work-steps__head">
 							<div class="work-steps__num">03</div>
 							<div class="work-steps__title">Оценка стоимости <br> проекта</div>
 						</div>
 						<div class="work-steps__text">Готовим подробное <br> предложение об объеме, <br> оптимальных сроках и стоимости <br> наших работ. Рекомендуем схему <br> организации строительства </div>
 					</div>
-					<div class="work-steps__item">
+					<div class="work-steps__item _item-6">
 						<div class="work-steps__head">
 							<div class="work-steps__num">04</div>
 							<div class="work-steps__title">Обсуждаем <br> детали</div>
 						</div>
 						<div class="work-steps__text">Приглашаем в гости в нашу <br> мастерскую на ARTPLAY, где <br> работают лучшие дизайнеры и <br> архитекторы Москвы. <br> Знакомимся. Вторая Бесплатная <br> консультация </div>
 					</div>
-					<div class="work-steps__item">
+					<div class="work-steps__item _item-7">
 						<div class="work-steps__head">
 							<div class="work-steps__num">05</div>
 							<div class="work-steps__title">Заключаем <br> договор</div>
@@ -976,7 +980,7 @@
 			</section>
 			<section class="guests">
 				<div class="guests__container smooth-showing-animation" data-watch>
-					<div class="guests__item guests__item_yellow">
+					<div class="guests__item guests__item_yellow _item-1">
 						<div class="guests__num">
 							30
 							<svg>
@@ -988,7 +992,7 @@
 							Скидка до 30% — <b> объекты площадью более 350 м2</b>
 						</div>
 					</div>
-					<div class="guests__item guests__item_green">
+					<div class="guests__item guests__item_green _item-2">
 						<div class="guests__num">
 							25
 							<svg>
@@ -1000,8 +1004,11 @@
 							<span class="hideInMobile">Мы экономим свое время, работая с проверенными профессионалами</span>
 						</div>
 					</div>
-					<div class="guests__item guests__item_empty guests__item_empty-first"></div>
-					<a href="#" class="guests__item guests__item_red">
+					<div class="guests__item guests__item_empty guests__item_empty-first  _item-3"></div>
+					<div class="guests__item _desktopLargeEmpty _item-4"></div>
+					<div class="guests__item _desktopLargeEmpty _item-5"></div>
+					<div class="guests__item _desktopLargeEmpty _item-12"></div>
+					<a href="#" class="guests__item guests__item_red _item-6">
 						<div class="title-h2">оставить заявку</div>
 						<div class="guests__text">
 							Ответьте всего на 8 коротких вопросов
@@ -1012,8 +1019,8 @@
 							</svg>
 						</div>
 					</a>
-					<div class="guests__item guests__item_empty"></div>
-					<div class="guests__item guests__item_white">
+					<div class="guests__item guests__item_empty _item-7"></div>
+					<div class="guests__item guests__item_white _item-8">
 						<div class="guests__num">
 							100
 							<svg>
@@ -1024,7 +1031,7 @@
 							Первые две консультации – <b> бесплатно </b>
 						</div>
 					</div>
-					<div class="guests__item guests__item_2x2">
+					<div class="guests__item guests__item_2x2 _item-9">
 						<div class="work-steps__item work-steps__item_slider portfolio-4x4__slider swiper">
 							<div class="portfolio-4x4__wrapper swiper-wrapper">
 								<div class="portfolio-4x4__slide swiper-slide">
@@ -1038,10 +1045,11 @@
 							<button type="button" class="portfolio-4x4__slider-prev slider-prev"></button>
 						</div>
 					</div>
-					<div class="guests__item guests__item_1x1">
+					<div class="guests__item guests__item_1x1 _item-10">
 						<div class="guests__item_2x1-title title-h1">приходите <br> в гости</div>
 					</div>
-					<div class="guests__item guests__item_2x1">
+					<div class="guests__item _desktopLargeEmpty _item-13"></div>
+					<div class="guests__item guests__item_2x1 _item-11">
 						<div class="guests__slider swiper">
 							<div class="guests__wrapper swiper-wrapper">
 								<div class="guests__slide swiper-slide">
@@ -1181,7 +1189,7 @@
 					</div>
 				</div>
 				<div class="footer__item footer__item_empty"></div>
-				<div class="footer__item">
+				<div class="footer__item _portfolio">
 					<a href="" class="footer__main-link">Портфолио</a>
 					<a href="" class="footer__link">Избранное</a>
 					<a href="" class="footer__link">Архитектурное проектирование</a>
@@ -1207,7 +1215,7 @@
 						<a href="tel:+74952870040" class="footer__info-link">+7 495 287 00 40</a>
 					</div>
 				</div>
-				<div class="footer__item footer__item_white  footer__item_white-last">
+				<div class="footer__item footer__item_white footer__item_white-last">
 					<div>
 						<b> Поставщиков продукции и услуг, соискателей настоятельно просим не звонить. Пишите: </b>
 						<br>
@@ -1227,7 +1235,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20230307103456"></script>
+	<script src="js/app.min.js?_v=20230307164105"></script>
 </body>
 
 </html>

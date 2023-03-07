@@ -4441,6 +4441,9 @@
                         },
                         600: {
                             slidesPerView: 2
+                        },
+                        1501: {
+                            slidesPerView: 3
                         }
                     }
                 });
