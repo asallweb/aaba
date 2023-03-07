@@ -173,7 +173,6 @@ body::after {
   left: 0;
   bottom: 0;
   right: 0;
-  padding: 30px 10px;
   -webkit-transition: visibility 0.8s ease 0s;
   -o-transition: visibility 0.8s ease 0s;
   transition: visibility 0.8s ease 0s;
@@ -207,6 +206,7 @@ body::after {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100%;
+  max-height: 100vh;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -216,6 +216,7 @@ body::after {
       -ms-flex-pack: center;
           justify-content: center;
   align-items: center;
+  padding: 30px 10px;
 }
 
 .popup__content {
@@ -231,7 +232,7 @@ body::after {
   background-color: #eee;
   padding: 20px;
   width: 100%;
-  max-width: 90vw;
+  max-width: 80vw;
   border-radius: 20px;
 }
 
@@ -488,6 +489,7 @@ body::after {
   width: 100%;
   height: 4px;
   background-color: #fff;
+  z-index: 1;
 }
 
 .portfolio__progress-fill {
@@ -3014,6 +3016,24 @@ body::after {
           transition-delay: 0.1s;
 }
 
+.mMenu__item:nth-child(6) {
+  -webkit-transition-delay: 0.03s;
+       -o-transition-delay: 0.03s;
+          transition-delay: 0.03s;
+}
+
+.mMenu__item:nth-child(7) {
+  -webkit-transition-delay: -0.04s;
+       -o-transition-delay: -0.04s;
+          transition-delay: -0.04s;
+}
+
+.mMenu__item:nth-child(8) {
+  -webkit-transition-delay: -0.11s;
+       -o-transition-delay: -0.11s;
+          transition-delay: -0.11s;
+}
+
 .menu-open .mMenu__item {
   -webkit-transform: scale(1) translateY(0px);
       -ms-transform: scale(1) translateY(0px);
@@ -3049,6 +3069,24 @@ body::after {
   -webkit-transition-delay: 0.7s;
        -o-transition-delay: 0.7s;
           transition-delay: 0.7s;
+}
+
+.menu-open .mMenu__item:nth-child(6) {
+  -webkit-transition-delay: 0.8s;
+       -o-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.menu-open .mMenu__item:nth-child(7) {
+  -webkit-transition-delay: 0.9s;
+       -o-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+.menu-open .mMenu__item:nth-child(8) {
+  -webkit-transition-delay: 1s;
+       -o-transition-delay: 1s;
+          transition-delay: 1s;
 }
 
 .mMenu__count {
