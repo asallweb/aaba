@@ -4564,9 +4564,11 @@
         let mMenuItem = document.querySelectorAll("[data-id]");
         for (var i = 0; i < mMenuItem.length; i++) mMenuItem[i].addEventListener("click", showMobileMenu, false);
         window.addEventListener("scroll", (function() {
+            const windowHeight = window.outerHeight;
             const scrollTop = window.scrollY;
             const element = this.document.getElementById("portfolio");
             if (scrollTop >= 130) element.classList.add("portfolio_scrolled"); else element.classList.remove("portfolio_scrolled");
+            if (scrollTop >= windowHeight) element.classList.add("_hidden"); else element.classList.remove("_hidden");
         }), false);
         window["FLS"] = true;
         isWebp();
