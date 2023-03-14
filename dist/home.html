@@ -26,7 +26,7 @@
 			document.querySelector('html').classList.remove("lock");
 		});
 	</script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230310095628">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230314092255">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -316,6 +316,20 @@
 			</button>
 		</section>
 		<main class="page">
+			<div class="showreel-btn-outer">
+				<picture><source srcset="img/content/showreel_bg.webp" type="image/webp"><img src="img/content/showreel_bg.png" class="showreel-image"></picture>
+				<button class="footer__showreel showreel-btn" data-popup="#showreel-popup" data-popup-youtube="XwJJlTXbvfE">
+					<div class="showreel-btn__round">
+						<svg class="showreel-btn__triangle">
+							<use xlink:href="img/icons/icons.svg#svg-play-triangle"></use>
+						</svg>
+						<svg class="showreel-btn__eye">
+							<use xlink:href="img/icons/icons.svg#svg-play-eye"></use>
+						</svg>
+					</div>
+					<div class="showreel-btn__title">play <br> SHOWREEL</div>
+				</button>
+			</div>
 			<section class="introduce">
 				<div class="introduce__container">
 					<div class="introduce__image-wrapper">
@@ -470,6 +484,7 @@
 										<div class="clients__comment-text">
 											Мы искренне благодарим архитектурно-проектное бюро и лично Юрия Логинова за консультирование и разработку обновленного плана-стратегии развития туризма города Кашин Тверской области - как части ЗОЛОТОГО КОЛЬЦА. Проект «Арт-Волга» - это широкие перспективы развития для региона при плодотворном взаимодействии частного малоэтажного строительства и масштабных художественных инициатив.
 										</div>
+										<button class="clients__show-more">Читать далее</button>
 										<a href="#" class="more-btn clients__more-btn">
 											Смотреть проект
 											<svg>
@@ -507,6 +522,7 @@
 										<div class="clients__comment-text">
 											Благодарен и рекомендую эффектную и эффективную смелость и положительный потенциал команды <a href="">Юрия Логинова</a> в работе над незаурядным образом нашего корпоративного интерьера.
 										</div>
+										<button class="clients__show-more">Читать далее</button>
 										<a href="#" class="more-btn clients__more-btn">
 											Смотреть проект
 											<svg>
@@ -810,7 +826,7 @@
 					</a>
 				</div>
 			</section>
-			<section class="advantages-list">
+			<section class="advantages-list _desktop">
 				<div class="advantages-list__container smooth-showing-animation" data-watch>
 					<div class="advantages-list__item advantages-list__item_main">
 						<div class="advantages-list__num">12</div>
@@ -911,6 +927,102 @@
 						<div class="advantages-list__title">Удобное для Вас <br> время</div>
 						<div class="advantages-list__text">Приятное и познавательное <br> деловое общение, в том числе <br> вечером и в выходные.</div>
 					</div>
+				</div>
+			</section>
+			<section class="advantages-list _mobile">
+				<div class="advantages-list__container smooth-showing-animation advantages__slider swiper" data-watch>
+					<div class="advantages-list__item advantages-list__item_main">
+						<div class="advantages-list__num">12</div>
+						<div class="advantages-list__name">Преимуществ</div>
+					</div>
+					<div class="advantages__wrapper swiper-wrapper">
+						<div class="advantages-list__item swiper-slide">
+							<div class="advantages-list__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#svg-advantages-list-1"></use>
+								</svg></div>
+							<div class="advantages-list__title">Увеличиваем ценность недвижимости</div>
+							<div class="advantages-list__text">Сбалансированный дизайн и <br> точные стратегические <br> решения значительно повысят <br> ликвидность Вашего объекта.</div>
+						</div>
+						<div class="advantages-list__item swiper-slide">
+							<div class="advantages-list__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#svg-advantages-list-2"></use>
+								</svg></div>
+							<div class="advantages-list__title">Ясный запоминающийся дизайн</div>
+							<div class="advantages-list__text">Мощный WOW-фактор. <br> Арсенал инноваций для <br> успешного бизнеса и личного <br> пространства.</div>
+						</div>
+						<div class="advantages-list__item swiper-slide">
+							<div class="advantages-list__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#svg-advantages-list-3"></use>
+								</svg></div>
+							<div class="advantages-list__title">Короткие <br> сроки</div>
+							<div class="advantages-list__text">Автоматизация процессов. <br> Запуск объекта с нуля за 35 <br> дней. Опыт ведения <br> проектирования параллельно <br> со строительными работами. </div>
+						</div>
+						<div class="advantages-list__item swiper-slide">
+							<div class="advantages-list__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#svg-advantages-list-4"></use>
+								</svg></div>
+							<div class="advantages-list__title">Слаженная <br> команда</div>
+							<div class="advantages-list__text">Наши партнеры проверены <br> временем. Инженеры, <br> строители, мебельное <br> производство. Согласования. <br> Работы под ключ.</div>
+						</div>
+						<div class="advantages-list__item swiper-slide">
+							<div class="advantages-list__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#svg-advantages-list-5"></use>
+								</svg></div>
+							<div class="advantages-list__title">Скидки от поставщиков <br> и строителей</div>
+							<div class="advantages-list__text">Партнеры - строители и оптовые <br> компании поставщиков - <br> экономят время, работая по <br> подробным чертежам, и дают <br> лучшие условия. </div>
+						</div>
+						<div class="advantages-list__item swiper-slide">
+							<div class="advantages-list__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#svg-advantages-list-6"></use>
+								</svg></div>
+							<div class="advantages-list__title">Спикеры профильных конференций</div>
+							<div class="advantages-list__text">Участвуем в ключевых <br> международных выставках, <br> образовательных и <br> благотворительных программах. <br> Семинары, тренинги, курсы.</div>
+						</div>
+						<div class="advantages-list__item swiper-slide">
+							<div class="advantages-list__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#svg-advantages-list-7"></use>
+								</svg></div>
+							<div class="advantages-list__title">Британское <br> качество</div>
+							<div class="advantages-list__text">Высокая культура и стандарт <br> проектирования. Звоним <br> вовремя, высылаем письма, когда <br> обещали, выдаем документацию, <br> как договаривались.</div>
+						</div>
+						<div class="advantages-list__item swiper-slide">
+							<div class="advantages-list__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#svg-advantages-list-8"></use>
+								</svg></div>
+							<div class="advantages-list__title">Финансовая <br> ответственность</div>
+							<div class="advantages-list__text">Несем финансовую <br> ответственность за качество <br> проекта, сроки и соответствие <br> актуальному законодательству <br> (СНиП, СанПиН ...)</div>
+						</div>
+						<div class="advantages-list__item swiper-slide">
+							<div class="advantages-list__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#svg-advantages-list-9"></use>
+								</svg></div>
+							<div class="advantages-list__title">Экономика <br> строительства</div>
+							<div class="advantages-list__text">Контроль строительных <br> затрат. Проектные решения и <br> стиль, существенно <br> увеличивающие ценность <br> недвижимости.</div>
+						</div>
+						<div class="advantages-list__item swiper-slide">
+							<div class="advantages-list__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#svg-advantages-list-10"></use>
+								</svg></div>
+							<div class="advantages-list__title">Уникальные <br> материалы</div>
+							<div class="advantages-list__text">Огромный выбор уникальных <br> материалов - Вы можете <br> подержать все в руках в нашем <br> офисе и на прилегающей <br> территории ARTPLAY.</div>
+						</div>
+						<div class="advantages-list__item swiper-slide">
+							<div class="advantages-list__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#svg-advantages-list-11"></use>
+								</svg></div>
+							<div class="advantages-list__title">Международный <br> опыт</div>
+							<div class="advantages-list__text">Адаптация лучших западных <br> технологий в проектировании <br> и строительстве под <br> особенности российского <br> производства.</div>
+						</div>
+						<div class="advantages-list__item swiper-slide">
+							<div class="advantages-list__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#svg-advantages-list-12"></use>
+								</svg></div>
+							<div class="advantages-list__title">Удобное для Вас <br> время</div>
+							<div class="advantages-list__text">Приятное и познавательное <br> деловое общение, в том числе <br> вечером и в выходные.</div>
+						</div>
+					</div>
+					<button type="button" class="advantages__slider-next slider-next"></button>
+					<button type="button" class="advantages__slider-prev slider-prev"></button>
 				</div>
 			</section>
 			<section class="work-steps">
@@ -1125,6 +1237,28 @@
 		</main>
 		<footer class="footer smooth-showing-animation" data-watch>
 			<div class="footer__container ">
+				<div class="socials __container">
+					<a href="" class="socials__item">
+						<svg width="23" height="19">
+							<use xlink:href="img/icons/icons.svg#svg-telegram"></use>
+						</svg>
+					</a>
+					<a href="" class="socials__item">
+						<svg width="21" height="21">
+							<use xlink:href="img/icons/icons.svg#svg-pinterest"></use>
+						</svg>
+					</a>
+					<a href="" class="socials__item">
+						<svg width="23" height="15">
+							<use xlink:href="img/icons/icons.svg#svg-vk"></use>
+						</svg>
+					</a>
+					<a href="" class="socials__item">
+						<svg width="18" height="16">
+							<use xlink:href="img/icons/icons.svg#svg-vimeo"></use>
+						</svg>
+					</a>
+				</div>
 				<div class="footer__item footer__item_1x2 hideInMobile">
 					<a href="" class="footer__main-link">Услуги по архитектурному проектированию</a>
 					<a href="" class="footer__link">Проекты и дизайн загородных вилл</a>
@@ -1203,7 +1337,8 @@
 				</div>
 				<div class="footer__item footer__item_white">
 					<div class="hideInMobile">
-						<b>Телефон <br> для <a href="" class="footer__info-link" style="text-decoration: underline;">заказа проекта</a></b><br>
+						<div class="footer__title title-h2">КОНТАКТЫ</div>
+						<b><a href="" class="footer__info-link" style="text-decoration: underline; color: rgb(94, 188, 100);">Заказать проект</a></b><br>
 						<span>
 							<a href="tel:+74955078690" class="footer__info-link _mt-5">+7 495 507 86 90</a>
 							будни с 9.00 до 22.00 <br>
@@ -1221,7 +1356,7 @@
 						<br>
 						<a href="mailto:info@aaba.ru" class="footer__info-link">info@aaba.ru</a>
 					</div>
-					<div>ООО «ААБА» © 2003-2022</div>
+					<div class="footer__copyright">ООО «ААБА» © 2003-2022</div>
 				</div>
 			</div>
 		</footer>
@@ -1235,7 +1370,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20230310095628"></script>
+	<script src="js/app.min.js?_v=20230314092255"></script>
 </body>
 
 </html>

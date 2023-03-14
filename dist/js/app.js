@@ -4341,6 +4341,7 @@
                 new core(".clients__slider", {
                     modules: [ Navigation, Lazy, EffectFade ],
                     slidesPerView: 1,
+                    preventClicks: false,
                     navigation: {
                         prevEl: ".clients__slider-prev",
                         nextEl: ".clients__slider-next"
@@ -4353,6 +4354,26 @@
                     effect: "fade",
                     loop: true
                 });
+                const questions = document.querySelectorAll(".clients__show-more");
+                questions.forEach((question => {
+                    question.addEventListener("click", (function() {
+                        const element = document.querySelectorAll(".clients__comment");
+                        questions.forEach((question => {
+                            question.classList.toggle("_active");
+                            if ("Читать далее" == question.firstChild.data) {
+                                question.firstChild.data = "Свернуть";
+                                element.forEach((element => {
+                                    element.style.height = "300px";
+                                }));
+                            } else {
+                                question.firstChild.data = "Читать далее";
+                                element.forEach((element => {
+                                    element.style.height = "187.5px";
+                                }));
+                            }
+                        }));
+                    }));
+                }));
             }
             if (document.querySelector(".trust__slider")) {
                 new core(".trust__slider", {
@@ -4447,6 +4468,46 @@
                         }
                     }
                 });
+            }
+            if (document.querySelector(".advantages__slider")) {
+                new core(".advantages__slider", {
+                    modules: [ Navigation, Lazy ],
+                    slidesPerView: 1,
+                    navigation: {
+                        prevEl: ".contact__slider-prev",
+                        nextEl: ".contact__slider-next"
+                    },
+                    speed: 800,
+                    preloadImages: false,
+                    lazy: {
+                        loadPrevNext: true
+                    },
+                    loop: true
+                });
+            }
+            if (document.querySelector(".advantages__slider")) {
+                var init = false;
+                var swiper = false;
+                function swiperCard() {
+                    if (window.innerWidth <= 600) {
+                        if (!init) {
+                            init = true;
+                            swiper = new core(".advantages__slider", {
+                                modules: [ Navigation ],
+                                slidesPerView: 1,
+                                navigation: {
+                                    prevEl: ".advantages__slider-prev",
+                                    nextEl: ".advantages__slider-next"
+                                }
+                            });
+                        }
+                    } else if (init) {
+                        swiper.destroy();
+                        init = false;
+                    }
+                }
+                swiperCard();
+                window.addEventListener("resize", swiperCard);
             }
         }
         window.addEventListener("load", (function(e) {
