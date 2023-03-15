@@ -861,12 +861,17 @@ body::after {
   height: 50% !important;
 }
 
+.partners .swiper-slide:hover {
+  background-color: rgb(242, 242, 242);
+}
+
 .partners__slider-prev,
 .partners__slider-next {
   top: 50%;
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
+  background-color: transparent !important;
 }
 
 .partners__slider-prev {
@@ -1088,9 +1093,6 @@ body::after {
   color: rgba(255, 255, 255, 0.7);
   top: 10px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1222,7 +1224,7 @@ body::after {
 }
 
 .trust .swiper-slide {
-  background: #fff;
+  background-color: #fff;
   width: 300px;
   overflow: hidden;
   display: -webkit-box;
@@ -1237,12 +1239,17 @@ body::after {
   height: 50% !important;
 }
 
+.trust .swiper-slide:hover {
+  background-color: rgb(242, 242, 242);
+}
+
 .trust__slider-prev,
 .trust__slider-next {
   top: 50%;
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
+  background-color: transparent !important;
 }
 
 .trust__slider-prev {
@@ -1818,6 +1825,7 @@ body::after {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+  margin-bottom: 10px;
 }
 
 .feedback-2x1__link svg {
@@ -2236,6 +2244,7 @@ body::after {
 }
 
 .guests__item_2x1-text {
+  height: 100%;
   font-size: 13px;
   line-height: 20px;
   display: -webkit-box;
@@ -2291,7 +2300,7 @@ body::after {
 }
 
 .guests__more-btn {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
@@ -2358,6 +2367,10 @@ body::after {
   grid-column: span 2/auto;
   -ms-grid-row-span: 2;
   grid-row: span 2/auto;
+}
+
+.contact__item_2x2 a {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact__item_contact {
@@ -3559,6 +3572,10 @@ body::after {
   margin-bottom: 12px;
 }
 
+.footer__link:hover {
+  color: rgb(94, 188, 100);
+}
+
 .footer__delimeter {
   margin-top: 50px;
 }
@@ -3754,6 +3771,10 @@ body::after {
 }
 
 @media (min-width: 600px) {
+  .socials {
+    display: none;
+  }
+
   .footer .showInMobile {
     display: none;
   }
@@ -5505,6 +5526,16 @@ body::after {
         -ms-flex-order: 2;
             order: 2;
     top: -300px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .partners__head-title {
+    min-width: 366px;
+  }
+
+  .services-info__more-btn {
+    padding-left: 43px;
   }
 }
 
