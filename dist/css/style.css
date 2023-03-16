@@ -4971,6 +4971,10 @@ body::after {
     line-height: 24px;
   }
 
+  .advantages-list__text br {
+    display: none;
+  }
+
   .work-steps__container {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
