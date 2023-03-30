@@ -4368,7 +4368,7 @@
                             } else {
                                 question.firstChild.data = "Читать далее";
                                 element.forEach((element => {
-                                    element.style.height = "187.5px";
+                                    element.style.height = "50vw";
                                 }));
                             }
                         }));
