@@ -4342,6 +4342,12 @@
                     modules: [ Navigation, Lazy, EffectFade ],
                     slidesPerView: 1,
                     preventClicks: false,
+                    observer: true,
+                    observeParents: true,
+                    effect: "fade",
+                    fadeEffect: {
+                        crossFade: true
+                    },
                     navigation: {
                         prevEl: ".clients__slider-prev",
                         nextEl: ".clients__slider-next"
@@ -4351,7 +4357,6 @@
                     lazy: {
                         loadPrevNext: true
                     },
-                    effect: "fade",
                     loop: true
                 });
                 const questions = document.querySelectorAll(".clients__show-more");
