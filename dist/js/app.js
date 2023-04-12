@@ -4363,17 +4363,24 @@
                 questions.forEach((question => {
                     question.addEventListener("click", (function() {
                         const element = document.querySelectorAll(".clients__comment");
+                        const elementText = document.querySelectorAll(".clients__comment-text");
                         questions.forEach((question => {
                             question.classList.toggle("_active");
-                            if ("Читать далее" == question.firstChild.data) {
+                            if (question.classList.contains("_active")) {
                                 question.firstChild.data = "Свернуть";
                                 element.forEach((element => {
                                     element.style.height = "300px";
+                                }));
+                                elementText.forEach((element => {
+                                    element.style.height = "auto";
                                 }));
                             } else {
                                 question.firstChild.data = "Читать далее";
                                 element.forEach((element => {
                                     element.style.height = "50vw";
+                                }));
+                                elementText.forEach((element => {
+                                    element.style.height = "100px";
                                 }));
                             }
                         }));
@@ -4416,6 +4423,20 @@
                 });
             }
             if (document.querySelector(".portfolio-4x4__slider")) {
+                const guests__slider = new core(".guests__slider", {
+                    modules: [ Navigation, EffectFade ],
+                    slidesPerView: 1,
+                    navigation: {
+                        prevEl: ".portfolio-4x4__slider-prev",
+                        nextEl: ".portfolio-4x4__slider-next"
+                    },
+                    speed: 800,
+                    loop: true,
+                    effect: "fade",
+                    fadeEffect: {
+                        crossFade: true
+                    }
+                });
                 new core(".portfolio-4x4__slider", {
                     modules: [ Navigation, Lazy ],
                     slidesPerView: 1,
@@ -4428,22 +4449,11 @@
                     lazy: {
                         loadPrevNext: true
                     },
-                    loop: true
-                });
-            }
-            if (document.querySelector(".guests__slider")) {
-                new core(".guests__slider", {
-                    modules: [ Navigation, EffectFade ],
-                    slidesPerView: 1,
-                    navigation: {
-                        prevEl: ".portfolio-4x4__slider-prev",
-                        nextEl: ".portfolio-4x4__slider-next"
-                    },
-                    speed: 800,
                     loop: true,
-                    effect: "fade",
-                    fadeEffect: {
-                        crossFade: true
+                    on: {
+                        slideChange: function() {
+                            guests__slider.slideTo(this.realIndex);
+                        }
                     }
                 });
             }
