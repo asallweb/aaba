@@ -3001,12 +3001,12 @@ body::after {
 .mMenu__2lvl_3lvl {
   padding: 10px 0 15px 40px;
   border-bottom: none;
-  max-width: 200px;
+  max-width: 202px;
 }
 
 .mMenu__link {
   display: block;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.5);
