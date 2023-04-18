@@ -1339,7 +1339,7 @@ body::after {
   width: 300px;
   height: 150px;
   background: rgba(255, 255, 255, 0.5);
-  padding: 45px 20px 45px 50px;
+  padding: 45px 50px;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1444,7 +1444,7 @@ body::after {
   width: 300px;
   height: 150px;
   background: #fff;
-  padding: 45px 20px 45px 50px;
+  padding: 45px 50px;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1674,7 +1674,7 @@ body::after {
   width: 300px;
   height: 300px;
   overflow: hidden;
-  padding: 40px 20px 20px 40px;
+  padding: 40px 20px 20px 50px;
 }
 
 .advantages-list__item._desktopLargeEmpty,
@@ -1761,7 +1761,7 @@ body::after {
   position: relative;
   background-color: #fff;
   overflow: hidden;
-  padding: 42px 20px 20px 50px;
+  padding: 42px 40px 20px 50px;
   height: 300px;
 }
 
@@ -3221,6 +3221,7 @@ body::after {
           justify-content: space-between;
   background-color: #fff;
   color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 
 .footer__item_white b {
@@ -3341,6 +3342,7 @@ body::after {
 
 .footer__copyright {
   font-size: 10px;
+  font-weight: normal;
 }
 
 .footer::before {
@@ -3827,7 +3829,7 @@ body::after {
   }
 
   .clients__comment-text {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .clients__photo {
@@ -4223,6 +4225,10 @@ body::after {
 
   .services-arch__icon {
     margin-bottom: 20px;
+  }
+
+  .services-arch__name {
+    max-width: 100%;
   }
 
   .services-design__inner {
@@ -4816,6 +4822,10 @@ body::after {
   .services-arch__item {
     width: 50%;
     height: 187.5px;
+  }
+
+  .services-arch__name {
+    max-width: 100px;
   }
 
   .services-arch__item {
