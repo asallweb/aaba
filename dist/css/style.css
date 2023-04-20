@@ -5260,6 +5260,10 @@ body::after {
     top: 35%;
   }
 
+  .portfolio__slider-prev {
+    left: 0;
+  }
+
   .portfolio__slide-wrapper-img {
     height: 70vh;
   }
