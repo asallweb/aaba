@@ -4723,6 +4723,7 @@ body::after {
   .clients__comment-text {
     overflow: hidden;
     height: 100px;
+    letter-spacing: -0.02em;
   }
 
   .clients__more-btn {
@@ -5195,7 +5196,6 @@ body::after {
 
   .footer__item_white-last {
     width: 100%;
-    font-size: 13px;
   }
 
   .footer__item_zakaz {
