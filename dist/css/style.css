@@ -5324,16 +5324,16 @@ body::after {
   }
 
   .header__logo {
-    height: 50px;
+    height: 56px;
     width: 75px;
-    font-size: 18.25px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 1px;
     z-index: 1;
   }
 
   .header__logo-letter {
     width: 25px;
-    height: 25px;
+    height: 28px;
   }
 
   .header__logo-letter_2st {
@@ -5341,19 +5341,19 @@ body::after {
   }
 
   .header__logo-letter_3st {
-    top: 25px;
+    top: 28px;
     left: 25px;
   }
 
   .header__logo-letter_4st {
     left: 50px;
-    top: 25px;
+    top: 28px;
   }
 
   .header__logo-architects {
     left: 50px;
     width: 75px;
-    height: 25px;
+    height: 28px;
   }
 
   .header__contacts {
@@ -5362,7 +5362,7 @@ body::after {
     top: 0;
     left: 75px;
     width: calc(100% - 75px);
-    height: 50px;
+    height: 56px;
     font-size: 12px;
     line-height: 15px;
     color: rgb(123, 123, 123);
@@ -5376,8 +5376,8 @@ body::after {
   .header__contacts-inner {
     background-color: transparent;
     position: relative;
-    top: 25px;
-    height: 25px;
+    top: 28px;
+    height: 28px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
