@@ -22,11 +22,13 @@
 	</style>
 	<script>
 		window.addEventListener('load', function() {
-			document.querySelector('.pre-loader').style.display = 'none';
-			document.querySelector('html').classList.remove("lock");
+			setTimeout(function() {
+				document.querySelector('.pre-loader').style.display = 'none';
+				document.querySelector('html').classList.remove("lock");
+			}, 5100);
 		});
 	</script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230421091620">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230424101733">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +37,8 @@
 <body>
 	<div class="pre-loader">
 		<div class="loader">
-			<img src="img/icons/logo.svg" alt="">
+			<!-- <img src="img/icons/logo.svg" alt=""> -->
+			<img src="img/content/AABA_Logo_Gif.gif" alt="">
 		</div>
 	</div>
 	<div class="wrapper">
@@ -1369,7 +1372,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20230421091620"></script>
+	<script src="js/app.min.js?_v=20230424101733"></script>
 </body>
 
 </html>
