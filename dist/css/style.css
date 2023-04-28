@@ -2498,6 +2498,16 @@ body::after {
   z-index: 1;
 }
 
+.my-gif {
+  -webkit-animation: my-animation 1s infinite;
+          animation: my-animation 1s infinite;
+}
+
+.my-gif.one-pass {
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
 .header {
   position: fixed;
   z-index: 3;
