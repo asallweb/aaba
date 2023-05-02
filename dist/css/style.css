@@ -2498,14 +2498,29 @@ body::after {
   z-index: 1;
 }
 
-.my-gif {
-  -webkit-animation: my-animation 1s infinite;
-          animation: my-animation 1s infinite;
+.svg_logo {
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all;
 }
 
-.my-gif.one-pass {
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+.svg_logo.animate-logo {
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  height: 75px;
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all;
 }
 
 .header {
