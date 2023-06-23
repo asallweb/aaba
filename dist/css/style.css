@@ -1273,6 +1273,14 @@ body::after {
   font-size: 15px;
 }
 
+.services-arch__item:hover {
+  background-color: rgb(242, 242, 242);
+}
+
+.services-arch__item:hover svg {
+  fill: #fff !important;
+}
+
 .services-arch__item_title {
   height: 300px;
   left: 0;
@@ -1790,6 +1798,7 @@ body::after {
   grid-column: span 2/auto;
   -ms-grid-row-span: 2;
   grid-row: span 2/auto;
+  z-index: 1;
 }
 
 .work-steps__head {
