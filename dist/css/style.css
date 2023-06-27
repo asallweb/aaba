@@ -1273,14 +1273,6 @@ body::after {
   font-size: 15px;
 }
 
-.services-arch__item:hover {
-  background-color: rgb(242, 242, 242);
-}
-
-.services-arch__item:hover svg {
-  fill: #fff !important;
-}
-
 .services-arch__item_title {
   height: 300px;
   left: 0;
@@ -1310,6 +1302,16 @@ body::after {
   top: 150px;
 }
 
+.services-arch a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.services-arch a:hover svg {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
 .services-arch__icon {
   max-width: 38px;
   max-height: 38px;
@@ -1336,6 +1338,12 @@ body::after {
 
 .services-arch__name {
   max-width: 100px;
+}
+
+.services-design {
+  z-index: 2;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 70%, 100% 100%, 50% 100%, 50% 50%, 0 50%);
+          clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 70%, 100% 100%, 50% 100%, 50% 50%, 0 50%);
 }
 
 .services-design__inner {
@@ -1413,6 +1421,16 @@ body::after {
   top: 1050px;
 }
 
+.services-design a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.services-design a:hover svg {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
 .services-design__icon {
   max-width: 38px;
   max-height: 38px;
@@ -1441,6 +1459,7 @@ body::after {
   position: absolute;
   left: 0;
   top: 300px;
+  z-index: 1;
 }
 
 .services-consult__inner {
@@ -1496,6 +1515,16 @@ body::after {
 .services-consult__item_4st {
   left: 300px;
   top: 450px;
+}
+
+.services-consult a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.services-consult a:hover svg {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .services-consult__icon {
@@ -1855,6 +1884,7 @@ body::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 1;
 }
 
 .guests__item_yellow {
@@ -4266,6 +4296,11 @@ body::after {
     max-width: 100%;
   }
 
+  .services-design {
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+
   .services-design__inner {
     width: 100%;
     height: auto;
@@ -5556,6 +5591,8 @@ body::after {
     position: absolute;
     right: 0;
     top: 0;
+    -webkit-clip-path: polygon(600px 600px, 66.67% 0px, 100% -0.22%, 100% 70%, 100% 100%, 50% 100%, 0.33% 100%, 4px 66.89%);
+            clip-path: polygon(600px 600px, 66.67% 0px, 100% -0.22%, 100% 70%, 100% 100%, 50% 100%, 0.33% 100%, 4px 66.89%);
   }
 
   .services-design__inner {
