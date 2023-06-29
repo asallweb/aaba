@@ -1827,6 +1827,9 @@ body::after {
   grid-column: span 2/auto;
   -ms-grid-row-span: 2;
   grid-row: span 2/auto;
+}
+
+.work-steps .work-steps__item_slider {
   z-index: 1;
 }
 
@@ -1884,7 +1887,6 @@ body::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  z-index: 1;
 }
 
 .guests__item_yellow {
