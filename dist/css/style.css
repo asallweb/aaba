@@ -2564,6 +2564,10 @@ body::after {
   transition: 1s all;
 }
 
+.gif_logo {
+  height: 180px;
+}
+
 .header {
   position: fixed;
   z-index: 3;
@@ -5392,6 +5396,10 @@ body::after {
 
   .portfolio__mouse {
     display: none;
+  }
+
+  .svg_logo.animate-logo {
+    height: 52px;
   }
 
   .header__logo {
