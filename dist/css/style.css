@@ -5533,10 +5533,6 @@ body::after {
     padding-bottom: 25px;
   }
 
-  .portfolio__name {
-    font-size: 30px;
-  }
-
   .portfolio__item_calc {
     height: 250px;
   }
