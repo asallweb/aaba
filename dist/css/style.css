@@ -5705,11 +5705,14 @@ body::after {
   .submenu .submenu-nav {
     height: 50px;
     grid-gap: 30px;
-    padding: 0 15px;
+    padding: 0 24px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .submenu .submenu-nav__item {
@@ -5720,7 +5723,7 @@ body::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 15px;
+    padding: 15px 24px;
   }
 
   .header__logo {
