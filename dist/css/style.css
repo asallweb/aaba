@@ -2095,6 +2095,12 @@ body::after {
   padding: 0;
 }
 
+.contact__item_portfolio {
+  right: auto;
+  width: 300px;
+  float: left;
+}
+
 .contact__item_calc:hover .contact__link svg {
   -webkit-animation: moveRight;
           animation: moveRight;
@@ -5462,6 +5468,11 @@ body::after {
   .contact__item_calc {
     left: 50%;
     margin-top: -50%;
+  }
+
+  .contact__item_portfolio.portfolio__item {
+    left: 25vw !important;
+    width: 50vw !important;
   }
 
   .btn-arrow_right-middle {
